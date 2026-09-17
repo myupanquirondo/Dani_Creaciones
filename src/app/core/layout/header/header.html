@@ -1,0 +1,54 @@
+<header class="header">
+  <div class="header__container">
+    <a
+      class="header__brand"
+      routerLink="/"
+      aria-label="Ir al inicio de Dani Creaciones"
+      (click)="closeMenu()"
+    >
+      <span class="header__brand-name">
+        <span>Dani</span><span>Creaciones</span>
+      </span>
+
+      <span class="header__tagline">
+        Proyectos que inspiran
+      </span>
+    </a>
+
+    <button
+      class="header__menu-toggle"
+      type="button"
+      aria-label="Abrir o cerrar menú de navegación"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-controls="main-navigation"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav
+      id="main-navigation"
+      class="header__navigation"
+      [class.header__navigation--open]="isMenuOpen()"
+      aria-label="Navegación principal"
+    >
+      <ul class="header__menu">
+        @for (item of navigationItems; track item.route) {
+          <li>
+            <a
+              class="header__link"
+              [routerLink]="item.route"
+              routerLinkActive="header__link--active"
+              [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+              (click)="closeMenu()"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

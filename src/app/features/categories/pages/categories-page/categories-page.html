@@ -1,0 +1,14 @@
+<section class="categories-page">
+  <app-section-title
+    title="Categorías"
+    subtitle="Explora nuestras categorías y encuentra el tipo de creación ideal para ese momento especial."
+  />
+
+  <div class="categories-page__grid">
+    @for (category of categories(); track category.id) {
+      <app-category-card [category]="category" />
+    } @empty {
+      <p>Aún no hay categorías disponibles.</p>
+    }
+  </div>
+</section>

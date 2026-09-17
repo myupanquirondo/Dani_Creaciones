@@ -1,0 +1,37 @@
+<section class="contact-page">
+  <app-section-title
+    title="Contacto"
+    subtitle="¿Tienes una idea en mente? Ponte en contacto con Dani Creaciones."
+  />
+
+  <div class="contact-page__methods">
+    @if (contactInfo.email) {
+      <app-contact-card
+        title="Correo"
+        [value]="contactInfo.email"
+        [href]="'mailto:' + contactInfo.email"
+      />
+    }
+
+    @if (contactInfo.phone) {
+      <app-contact-card
+        title="Teléfono"
+        [value]="contactInfo.phone"
+        [href]="'tel:' + contactInfo.phone"
+      />
+    }
+
+    @if (contactInfo.whatsappUrl) {
+      <app-contact-card
+        title="WhatsApp"
+        value="Escríbenos por WhatsApp"
+        [href]="contactInfo.whatsappUrl"
+      />
+    }
+  </div>
+
+  <app-social-links
+    [instagramUrl]="contactInfo.instagramUrl"
+    [tiktokUrl]="contactInfo.tiktokUrl"
+  />
+</section>

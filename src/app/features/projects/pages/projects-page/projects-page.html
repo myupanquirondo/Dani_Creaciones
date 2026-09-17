@@ -1,0 +1,20 @@
+<section class="projects-page">
+  <app-section-title
+    title="Nuestros trabajos"
+    subtitle="Explora las creaciones realizadas por Dani Creaciones y encuentra inspiración para tu próximo detalle personalizado."
+  />
+
+  <app-project-filter
+    [categories]="categories()"
+    [selectedCategory]="selectedCategory()"
+    (categoryChange)="selectCategory($event)"
+  />
+
+  <div class="projects-page__grid">
+    @for (project of filteredProjects(); track project.id) {
+      <app-project-card [project]="project" />
+    } @empty {
+      <p>No hay proyectos disponibles en esta categoría.</p>
+    }
+  </div>
+</section>

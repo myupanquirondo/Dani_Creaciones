@@ -1,0 +1,62 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__brand">
+      <a
+        class="footer__logo"
+        routerLink="/"
+        aria-label="Ir al inicio de Dani Creaciones"
+      >
+        <span>Dani</span><span>Creaciones</span>
+      </a>
+
+      <p>
+        Creaciones personalizadas para momentos especiales.
+      </p>
+    </div>
+
+    <nav
+      class="footer__navigation"
+      aria-label="Navegación del pie de página"
+    >
+      <h2>Explorar</h2>
+
+      <ul>
+        @for (item of navigationItems; track item.route) {
+          <li>
+            <a [routerLink]="item.route">
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="footer__contact">
+      <h2>Contacto</h2>
+
+      @if (contactInfo.email) {
+        <a [href]="'mailto:' + contactInfo.email">
+          {{ contactInfo.email }}
+        </a>
+      }
+
+      @if (contactInfo.phone) {
+        <a [href]="'tel:' + contactInfo.phone">
+          {{ contactInfo.phone }}
+        </a>
+      }
+
+      @if (!contactInfo.email && !contactInfo.phone) {
+        <p>
+          Información de contacto próximamente.
+        </p>
+      }
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p>
+      © 2026 Dani Creaciones. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>

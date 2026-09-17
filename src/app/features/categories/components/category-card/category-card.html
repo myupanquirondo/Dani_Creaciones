@@ -1,0 +1,22 @@
+<article class="category-card">
+  <img
+    [src]="category().image"
+    [alt]="category().name"
+    loading="lazy"
+  />
+
+  <div class="category-card__content">
+    <h3>{{ category().name }}</h3>
+
+    <p>
+      {{ category().description }}
+    </p>
+
+    <a
+      [routerLink]="['/proyectos']"
+      [queryParams]="{ categoria: category().slug }"
+    >
+      Ver proyectos
+    </a>
+  </div>
+</article>

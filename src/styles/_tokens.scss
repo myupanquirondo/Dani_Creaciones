@@ -1,0 +1,45 @@
+:root {
+  // Tipografías
+  --font-body: 'Nunito', sans-serif;
+  --font-heading: 'Mali', cursive;
+
+  // Colores principales
+  --color-primary: #0b2a6f;
+  --color-accent: #f54b9b;
+  --color-accent-soft: #ffd9ea;
+  --color-whatsapp: #08b866;
+
+  // Fondos
+  --color-background: #ffffff;
+  --color-background-pink: #fff1f7;
+  --color-background-blue: #eef9ff;
+  --color-background-purple: #f5efff;
+  --color-background-green: #effcf5;
+  --color-background-yellow: #fff9e8;
+
+  // Texto
+  --color-text: #10285f;
+  --color-text-muted: #52617d;
+  --color-text-light: #ffffff;
+
+  // Bordes
+  --color-border: #e7eaf0;
+
+  // Radios
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 9999px;
+
+  // Sombras
+  --shadow-sm: 0 2px 8px rgb(15 42 94 / 8%);
+  --shadow-md: 0 8px 24px rgb(15 42 94 / 10%);
+
+  // Contenedor
+  --container-max-width: 1200px;
+  --container-padding: 1.5rem;
+
+  // Transiciones
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}

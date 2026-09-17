@@ -1,0 +1,16 @@
+<section class="home-categories">
+  <app-section-title
+    title="¿Qué tipo de trabajo necesitas?"
+    subtitle="Explora nuestras categorías y encuentra inspiración para tu próxima creación."
+  />
+
+  <div class="home-categories__grid">
+    @for (category of categories(); track category.id) {
+      <app-category-card [category]="category" />
+    } @empty {
+      <p class="home-categories__empty">
+        Próximamente encontrarás aquí nuestras categorías.
+      </p>
+    }
+  </div>
+</section>

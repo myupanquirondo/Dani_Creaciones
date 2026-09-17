@@ -1,0 +1,16 @@
+<div
+  class="project-filter"
+  role="group"
+  aria-label="Filtrar proyectos por categoría"
+>
+  @for (category of categories(); track category) {
+    <button
+      type="button"
+      [class.active]="category === selectedCategory()"
+      [attr.aria-pressed]="category === selectedCategory()"
+      (click)="selectCategory(category)"
+    >
+      {{ category }}
+    </button>
+  }
+</div>

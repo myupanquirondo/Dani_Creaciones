@@ -1,0 +1,18 @@
+<section class="how-to-order-page">
+  <app-section-title
+    title="¿Cómo pedir?"
+    subtitle="Conoce el proceso para solicitar una creación personalizada en Dani Creaciones."
+  />
+
+  <div class="how-to-order-page__steps">
+    @for (orderStep of orderSteps(); track orderStep.step) {
+      <app-order-step
+        [step]="orderStep.step"
+        [title]="orderStep.title"
+        [description]="orderStep.description"
+      />
+    } @empty {
+      <p>Próximamente encontrarás aquí el proceso para realizar tu pedido.</p>
+    }
+  </div>
+</section>
