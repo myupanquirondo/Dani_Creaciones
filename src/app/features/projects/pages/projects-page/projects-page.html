@@ -1,20 +1,139 @@
 <section class="projects-page">
-  <app-section-title
-    title="Nuestros trabajos"
-    subtitle="Explora las creaciones realizadas por Dani Creaciones y encuentra inspiración para tu próximo detalle personalizado."
-  />
 
+  <!-- =========================
+       HERO
+       ========================= -->
+  <section class="projects-hero">
+    <div class="projects-hero__container">
+
+      <!-- CONTENIDO IZQUIERDO -->
+      <div class="projects-hero__content">
+
+        <nav
+          class="projects-hero__breadcrumb"
+          aria-label="Ruta de navegación"
+        >
+          <a routerLink="/">Inicio</a>
+
+          <span aria-hidden="true">›</span>
+
+          <span>Nuestros trabajos</span>
+        </nav>
+
+        <h1>
+          Nuestros
+          <span>trabajos</span>
+          <span class="projects-hero__heart">♡</span>
+        </h1>
+
+        <p class="projects-hero__description">
+          Conoce algunos de los proyectos que hemos realizado.
+          Cada trabajo es personalizado según las indicaciones,
+          temática y materiales solicitados.
+        </p>
+
+        <div class="projects-hero__benefits">
+
+          <div class="projects-hero__benefit">
+            <span class="projects-hero__benefit-icon">♡</span>
+
+            <p>
+              Trabajos únicos<br />
+              y personalizados
+            </p>
+          </div>
+
+          <div class="projects-hero__benefit">
+            <span class="projects-hero__benefit-icon">☆</span>
+
+            <p>
+              Cuidado en<br />
+              cada detalle
+            </p>
+          </div>
+
+          <div class="projects-hero__benefit">
+            <span class="projects-hero__benefit-icon">☺</span>
+
+            <p>
+              Ideas que se convierten<br />
+              en grandes aprendizajes
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- IMAGEN DERECHA -->
+      <div class="projects-hero__visual">
+        <img
+          class="projects-hero__image"
+          src="/images/projects/nuestros_trabajos_img.png"
+          alt="Espacio creativo de Dani Creaciones con materiales para proyectos y manualidades"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================
+       FILTROS
+       ========================= -->
   <app-project-filter
     [categories]="categories()"
     [selectedCategory]="selectedCategory()"
     (categoryChange)="selectCategory($event)"
   />
 
+  <!-- =========================
+       PROYECTOS
+       ========================= -->
   <div class="projects-page__grid">
-    @for (project of filteredProjects(); track project.id) {
+    @for (project of paginatedProjects(); track project.id) {
       <app-project-card [project]="project" />
     } @empty {
       <p>No hay proyectos disponibles en esta categoría.</p>
     }
   </div>
+
+  @if (totalPages() > 1) {
+    <nav
+      class="projects-page__pagination"
+      aria-label="Paginación de proyectos"
+    >
+      <button
+        type="button"
+        class="projects-page__pagination-arrow"
+        [disabled]="currentPage() === 1"
+        (click)="previousPage()"
+        aria-label="Página anterior"
+      >
+        ‹
+      </button>
+
+      @for (page of pages(); track page) {
+        <button
+          type="button"
+          class="projects-page__pagination-page"
+          [class.projects-page__pagination-page--active]="currentPage() === page"
+          (click)="goToPage(page)"
+          [attr.aria-current]="currentPage() === page ? 'page' : null"
+        >
+          {{ page }}
+        </button>
+      }
+
+      <button
+        type="button"
+        class="projects-page__pagination-arrow"
+        [disabled]="currentPage() === totalPages()"
+        (click)="nextPage()"
+        aria-label="Página siguiente"
+      >
+        ›
+      </button>
+    </nav>
+  }
+
 </section>

@@ -5,6 +5,7 @@ import { map } from 'rxjs';
 
 import { PROJECTS } from '../../data/projects.data';
 import { ProjectGallery } from '../../components/project-gallery/project-gallery';
+import { CONTACT_INFO } from '../../../../core/constants/contact.constants';
 
 @Component({
   selector: 'app-project-detail-page',
@@ -30,5 +31,19 @@ export class ProjectDetailPage {
     }
 
     return PROJECTS.find((project) => project.slug === slug);
+  });
+
+  readonly whatsappUrl = computed(() => {
+    const project = this.project();
+
+    if (!project || !CONTACT_INFO.whatsappUrl) {
+      return '';
+    }
+
+    const message =
+      `Hola, quisiera cotizar el proyecto "${project.title}". ` +
+      `¿Podrían brindarme más información?`;
+
+    return `${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(message)}`;
   });
 }

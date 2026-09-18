@@ -1,0 +1,274 @@
+.home-about {
+  padding-block: 3.5rem;
+  background-color: var(--color-background);
+}
+
+.home-about__container {
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-max-width)
+  );
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 0.8fr)
+    minmax(0, 2fr)
+    minmax(180px, 0.65fr);
+
+  align-items: center;
+  gap: 2rem;
+}
+
+/* =========================
+   IMAGEN
+   ========================= */
+
+.home-about__image {
+  min-width: 0;
+}
+
+.home-about__image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  color: var(--color-text-muted);
+
+  background:
+    radial-gradient(
+      circle at 25% 25%,
+      var(--color-background-yellow),
+      transparent 40%
+    ),
+    var(--color-background-pink);
+
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.home-about__image-placeholder img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* =========================
+   CONTENIDO
+   ========================= */
+
+.home-about__content {
+  min-width: 0;
+}
+
+.home-about__content h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.home-about__content h2 span {
+  color: var(--color-accent);
+  font-size: 1.7rem;
+}
+
+.home-about__description {
+  max-width: 720px;
+  margin-top: 0.75rem;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* =========================
+   VALORES
+   ========================= */
+
+.home-about__values {
+  margin-top: 1.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.home-about__value {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.home-about__value-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+
+  display: grid;
+  place-items: center;
+
+  color: #7655df;
+  background-color: var(--color-accent-soft);
+
+  border-radius: 50%;
+
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.home-about__value:nth-child(2) .home-about__value-icon {
+  background-color: var(--color-background-purple);
+}
+
+.home-about__value:nth-child(3) .home-about__value-icon {
+  background-color: var(--color-background-pink);
+}
+
+.home-about__value p {
+  color: var(--color-text-muted);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.home-about__value strong {
+  display: block;
+
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+/* =========================
+   IMAGEN FRASE MOTIVADORA
+   ========================= */
+
+.home-about__message {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-about__message img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1000px) {
+  .home-about__container {
+    grid-template-columns:
+      minmax(200px, 0.75fr)
+      minmax(0, 1.5fr);
+  }
+
+  .home-about__message {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .home-about__message img {
+    max-width: 200px;
+  }
+}
+
+/* =========================
+   MÓVIL
+   ========================= */
+
+@media (max-width: 600px) {
+  .home-about {
+    padding-block: 2.75rem;
+  }
+
+  .home-about__container {
+    width: calc(100% - 2rem);
+
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .home-about__image {
+    width: 100%;
+    max-width: 360px;
+
+    margin-inline: auto;
+  }
+
+  .home-about__content {
+    text-align: center;
+  }
+
+  .home-about__content h2 {
+    justify-content: center;
+
+    font-size: 1.8rem;
+  }
+
+  .home-about__description {
+    margin-inline: auto;
+
+    font-size: 0.8rem;
+  }
+
+  .home-about__values {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .home-about__value {
+    max-width: 260px;
+
+    margin-inline: auto;
+
+    text-align: left;
+  }
+
+  .home-about__message {
+    grid-column: auto;
+
+    width: 100%;
+
+    margin-inline: auto;
+  }
+
+  .home-about__message img {
+    width: 100%;
+    max-width: 190px;
+  }
+}

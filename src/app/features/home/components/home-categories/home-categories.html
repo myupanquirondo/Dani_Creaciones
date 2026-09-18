@@ -6,11 +6,47 @@
 
   <div class="home-categories__grid">
     @for (category of categories(); track category.id) {
-      <app-category-card [category]="category" />
-    } @empty {
-      <p class="home-categories__empty">
-        Próximamente encontrarás aquí nuestras categorías.
-      </p>
+      <a
+        class="home-categories__card"
+        [routerLink]="['/proyectos']"
+        [queryParams]="{ categoria: category.slug }"
+      >
+        <div class="home-categories__icon">
+          @switch (category.slug) {
+            @case ('maquetas') {
+              <img src="/images/categories/icons/maquetas.png" alt="" />
+            }
+
+            @case ('tripticos') {
+              <img src="/images/categories/icons/tripticos.png" alt="" />
+            }
+
+            @case ('papelotes') {
+              <img src="/images/categories/icons/papelotes.png" alt="" />
+            }
+
+            @case ('manualidades') {
+              <img src="/images/categories/icons/manualidades.png" alt="" />
+            }
+
+            @case ('proyectos-de-ciencia') {
+              <img src="/images/categories/icons/proyectos_ciencia.png" alt="" />
+            }
+
+            @case ('carteles-y-afiches') {
+              <img src="/images/categories/icons/carteles_afiches.png" alt="" />
+            }
+
+            @default {
+              <img src="/images/categories/icons/otros.png" alt="" />
+            }
+          }
+        </div>
+
+        <span class="home-categories__name">
+          {{ category.name }}
+        </span>
+      </a>
     }
   </div>
 </section>

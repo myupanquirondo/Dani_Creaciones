@@ -1,26 +1,94 @@
 @if (project(); as currentProject) {
   <article class="project-detail">
+
     <header class="project-detail__header">
-      <p>{{ currentProject.category }}</p>
+      <p class="project-detail__category">
+        {{ currentProject.category }}
+      </p>
 
       <h1>{{ currentProject.title }}</h1>
-
-      <p>
-        {{ currentProject.description }}
-      </p>
     </header>
 
-    <app-project-gallery
-      [images]="currentProject.images"
-      [projectTitle]="currentProject.title"
-    />
+    <section class="project-detail__summary">
+
+      <div class="project-detail__cover">
+        @if (currentProject.coverImage) {
+          <img
+            [src]="currentProject.coverImage"
+            [alt]="currentProject.title"
+          />
+        } @else {
+          <div class="project-detail__cover-placeholder">
+            <span>✦</span>
+            <p>Foto próximamente</p>
+          </div>
+        }
+      </div>
+
+      <div class="project-detail__information">
+
+        <div class="project-detail__description">
+          <h2>Sobre este proyecto</h2>
+          <p>{{ currentProject.description }}</p>
+        </div>
+
+        <div class="project-detail__details">
+
+          <div class="project-detail__detail">
+            <span class="project-detail__detail-label">Precio</span>
+            <strong>{{ currentProject.price }}</strong>
+          </div>
+
+          <div class="project-detail__detail">
+            <span class="project-detail__detail-label">
+              Tiempo aproximado
+            </span>
+            <strong>{{ currentProject.estimatedTime }}</strong>
+          </div>
+
+        </div>
+
+        <div class="project-detail__materials">
+          <h2>Materiales</h2>
+
+          <ul>
+            @for (material of currentProject.materials; track material) {
+              <li>{{ material }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="project-detail__customization">
+          <h2>Personalización</h2>
+          <p>{{ currentProject.customization }}</p>
+        </div>
+
+        <a
+          class="project-detail__whatsapp"
+          [href]="whatsappUrl()"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Cotizar este proyecto por WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+    <section class="project-detail__gallery">
+      <h2>Galería del proyecto</h2>
+
+      <app-project-gallery
+        [images]="currentProject.images"
+        [projectTitle]="currentProject.title"
+      />
+    </section>
+
   </article>
 } @else {
   <section class="project-detail__not-found">
     <h1>Proyecto no encontrado</h1>
-
-    <p>
-      El proyecto que buscas no existe o ya no está disponible.
-    </p>
+    <p>El proyecto que buscas no existe o ya no está disponible.</p>
   </section>
 }

@@ -1,16 +1,24 @@
 <article class="category-card">
-  <img
-    [src]="category().image"
-    [alt]="category().name"
-    loading="lazy"
-  />
+  @if (category().image; as image) {
+    <img
+      [src]="image"
+      [alt]="category().name"
+      loading="lazy"
+    />
+  } @else {
+    <div
+      class="category-card__placeholder"
+      role="img"
+      [attr.aria-label]="'Imagen pendiente de ' + category().name"
+    >
+      <span>Imagen próximamente</span>
+    </div>
+  }
 
   <div class="category-card__content">
     <h3>{{ category().name }}</h3>
 
-    <p>
-      {{ category().description }}
-    </p>
+    <p>{{ category().description }}</p>
 
     <a
       [routerLink]="['/proyectos']"

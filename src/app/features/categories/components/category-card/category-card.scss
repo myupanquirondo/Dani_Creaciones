@@ -81,3 +81,41 @@
 .category-card__content a:hover::after {
   transform: translateX(4px);
 }
+
+.category-card__placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  display: grid;
+  place-items: center;
+
+  padding: 1rem;
+
+  color: var(--color-accent);
+  background:
+    radial-gradient(
+      circle at 25% 30%,
+      var(--color-accent-soft),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 75% 70%,
+      var(--color-background-blue),
+      transparent 35%
+    ),
+    var(--color-background-pink);
+
+  text-align: center;
+}
+
+.category-card__placeholder span {
+  padding: 0.55rem 0.9rem;
+
+  background-color: var(--color-background);
+  border-radius: var(--radius-pill);
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  box-shadow: var(--shadow-sm);
+}

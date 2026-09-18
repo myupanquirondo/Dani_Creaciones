@@ -1,9 +1,6 @@
 <section class="featured-projects">
   @for (project of featuredProjects(); track project.id) {
-    <article>
-      <h3>{{ project.title }}</h3>
-      <p>{{ project.description }}</p>
-    </article>
+    <app-project-card [project]="project" />
   } @empty {
     <p>Aún no hay proyectos destacados.</p>
   }

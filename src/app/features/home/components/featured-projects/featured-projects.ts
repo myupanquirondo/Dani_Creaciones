@@ -2,10 +2,11 @@ import { Component, computed, signal } from '@angular/core';
 
 import { PROJECTS } from '../../../projects/data/projects.data';
 import { Project } from '../../../projects/models/project.model';
+import { ProjectCard } from '../../../projects/components/project-card/project-card';
 
 @Component({
   selector: 'app-featured-projects',
-  imports: [],
+  imports: [ProjectCard],
   templateUrl: './featured-projects.html',
   styleUrl: './featured-projects.scss',
 })

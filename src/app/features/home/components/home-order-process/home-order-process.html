@@ -1,0 +1,114 @@
+<section class="order-process">
+  <div class="order-process__container">
+
+    <header class="order-process__header">
+      <div class="order-process__title">
+        <h2>¿Cómo hacer tu pedido?</h2>
+      </div>
+
+      <p>Todo es muy sencillo. Solo sigue estos pasos.</p>
+    </header>
+
+    <div class="order-process__steps">
+      @for (item of orderSteps; track item.step) {
+        <article class="order-process__step">
+
+          <div class="order-process__icon">
+            @switch (item.step) {
+              @case (1) {
+                <img
+                  src="/images/how-to-order/cuentame_tu_idea.png"
+                  alt=""
+                  loading="lazy"
+                />
+              }
+
+              @case (2) {
+                <img
+                  src="/images/how-to-order/damos_cotizacion.png"
+                  alt=""
+                  loading="lazy"
+                />
+              }
+
+              @case (3) {
+                <img
+                  src="/images/how-to-order/elaboracion_trabajo.png"
+                  alt=""
+                  loading="lazy"
+                />
+              }
+
+              @case (4) {
+                <img
+                  src="/images/how-to-order/coordinazion_entrega.png"
+                  alt=""
+                  loading="lazy"
+                />
+              }
+            }
+          </div>
+
+          <h3>
+            <span>{{ item.step }}.</span>
+            {{ item.title }}
+          </h3>
+
+          <p>{{ item.description }}</p>
+
+          @if (!$last) {
+            <span class="order-process__arrow" aria-hidden="true">
+              →
+            </span>
+          }
+        </article>
+      }
+    </div>
+
+    <div class="order-process__custom">
+
+      <div class="order-process__custom-content">
+        <img
+          class="order-process__custom-plane"
+          src="/images/how-to-order/avion_papel_2.png"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <div class="order-process__custom-text">
+          <h3>¿Tienes una idea diferente?</h3>
+
+          <p class="order-process__custom-highlight">
+            ¡También realizamos trabajos personalizados!
+          </p>
+
+          <p class="order-process__custom-description">
+            Escríbenos por WhatsApp y cuéntanos qué necesitas.
+          </p>
+        </div>
+      </div>
+
+      <div class="order-process__custom-decoration" aria-hidden="true">
+        <img
+          src="/images/how-to-order/linea_decorativa_pedido.png"
+          alt=""
+        />
+      </div>
+
+      <a
+    class="order-process__whatsapp"
+    href="https://wa.me/51990435729?text=Hola%2C%20quisiera%20realizar%20una%20cotizaci%C3%B3n."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Cotizar ahora por WhatsApp"
+  >
+    <img
+      src="/images/how-to-order/boton_cotizar_whatsapp.png"
+      alt="Cotizar ahora por WhatsApp"
+    />
+  </a>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,477 @@
+.order-process {
+  padding-block: 3.25rem 3rem;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgb(255 225 237 / 45%),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 90% 25%,
+      rgb(237 229 255 / 45%),
+      transparent 22%
+    ),
+    #fffafc;
+}
+
+.order-process__container {
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-max-width)
+  );
+
+  margin-inline: auto;
+}
+
+/* =========================
+   TÍTULO
+   ========================= */
+
+.order-process__header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.order-process__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.order-process__title h2 {
+  color: var(--color-primary);
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.order-process__header p {
+  margin-top: 0.45rem;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* =========================
+   PASOS
+   ========================= */
+
+.order-process__steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.4rem;
+}
+
+.order-process__step {
+  position: relative;
+
+  min-width: 0;
+  min-height: 190px;
+
+  padding: 1.15rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: rgb(255 255 255 / 92%);
+
+  border: 1px solid rgb(231 234 240 / 70%);
+  border-radius: 1rem;
+
+  text-align: center;
+
+  box-shadow: 0 5px 18px rgb(15 42 94 / 6%);
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.order-process__step:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   IMÁGENES DE LOS PASOS
+   ========================= */
+
+.order-process__icon {
+  width: 78px;
+  height: 78px;
+
+  margin-bottom: 0.55rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.order-process__icon img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: contain;
+}
+
+/* =========================
+   TEXTO
+   ========================= */
+
+.order-process__step h3 {
+  color: var(--color-primary);
+
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.order-process__step h3 span {
+  color: var(--color-primary);
+}
+
+.order-process__step p {
+  max-width: 230px;
+
+  margin-top: 0.4rem;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* =========================
+   FLECHAS
+   ========================= */
+
+.order-process__arrow {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 50%;
+  right: -2rem;
+
+  color: #7757d9;
+
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+
+  transform: translateY(-50%);
+}
+
+/* =========================
+   CTA INFERIOR
+   ========================= */
+
+.order-process__custom {
+  margin-top: 2rem;
+
+  padding: 1.25rem 1.75rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  background-color: #fff0f6;
+
+  border: 1px solid var(--color-accent-soft);
+  border-radius: 1rem;
+}
+
+.order-process__custom-content {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  min-width: 0;
+}
+
+.order-process__custom-plane {
+  width: 80px;
+  height: 80px;
+
+  flex: 0 0 80px;
+
+  display: block;
+  object-fit: contain;
+}
+
+/* Mueve el texto un poco hacia la derecha en escritorio */
+.order-process__custom-text {
+  transform: translateX(60px);
+}
+
+.order-process__custom-text h3 {
+  color: var(--color-primary);
+
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.order-process__custom-highlight {
+  margin-top: 0.2rem;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.order-process__custom-description {
+  max-width: 680px;
+
+  margin-top: 0.15rem;
+
+  color: var(--color-text-muted);
+
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* =========================
+   LÍNEA DECORATIVA
+   ========================= */
+
+.order-process__custom-decoration {
+  flex: 1;
+
+  min-width: 100px;
+  max-width: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-process__custom-decoration img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+  object-fit: contain;
+}
+
+/* =========================
+   BOTÓN WHATSAPP EN IMAGEN
+   ========================= */
+
+.order-process__whatsapp {
+  width: 290px;
+  flex: 0 0 290px;
+
+  display: block;
+
+  min-height: 0;
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  transform: translateX(-30px);
+
+  transition: transform var(--transition-fast);
+}
+
+.order-process__whatsapp img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+  object-fit: contain;
+}
+
+.order-process__whatsapp:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: none;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1000px) {
+  .order-process__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .order-process__arrow {
+    display: none;
+  }
+
+  .order-process__custom-text {
+    transform: translateX(20px);
+  }
+
+  .order-process__custom-decoration {
+    max-width: 260px;
+  }
+
+  .order-process__whatsapp {
+    width: 210px;
+    flex-basis: 210px;
+  }
+}
+
+/* =========================
+   MÓVIL
+   ========================= */
+
+@media (max-width: 600px) {
+  .order-process {
+    padding-block: 2.75rem;
+  }
+
+  .order-process__container {
+    width: calc(100% - 2rem);
+  }
+
+  .order-process__header {
+    margin-bottom: 1.5rem;
+  }
+
+  .order-process__title {
+    gap: 0.35rem;
+  }
+
+  .order-process__title h2 {
+    font-size: 1.75rem;
+  }
+
+  .order-process__header p {
+    font-size: 0.78rem;
+  }
+
+  .order-process__steps {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .order-process__step {
+    min-height: 0;
+
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: auto auto;
+
+    column-gap: 0.9rem;
+
+    align-items: center;
+
+    text-align: left;
+  }
+
+  .order-process__icon {
+    width: 64px;
+    height: 64px;
+
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    margin-bottom: 0;
+  }
+
+  .order-process__step h3 {
+    grid-column: 2;
+    grid-row: 1;
+
+    align-self: end;
+
+    font-size: 0.9rem;
+  }
+
+  .order-process__step p {
+    grid-column: 2;
+    grid-row: 2;
+
+    max-width: none;
+
+    margin-top: 0.2rem;
+
+    align-self: start;
+
+    font-size: 0.74rem;
+  }
+
+  /* CTA */
+
+  .order-process__custom {
+    margin-top: 1.25rem;
+
+    padding: 1.2rem;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 1rem;
+
+    text-align: center;
+  }
+
+  .order-process__custom-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .order-process__custom-text {
+    transform: none;
+  }
+
+  .order-process__custom-text p {
+    margin-inline: auto;
+  }
+
+  .order-process__custom-plane {
+    width: 70px;
+    height: 70px;
+
+    flex-basis: 70px;
+  }
+
+  .order-process__custom-decoration {
+    width: 100%;
+    max-width: 260px;
+
+    margin-inline: auto;
+  }
+
+  .order-process__custom-decoration img {
+    width: 100%;
+  }
+
+  .order-process__whatsapp {
+    width: min(100%, 240px);
+    flex-basis: auto;
+
+    margin-inline: auto;
+  }
+}

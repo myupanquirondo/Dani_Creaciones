@@ -14,9 +14,18 @@
   padding-block: 4rem;
 
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns:
+    minmax(240px, 1.35fr)
+    minmax(150px, 0.8fr)
+    minmax(170px, 0.8fr)
+    minmax(210px, 1fr);
+
+  gap: 3rem;
 }
+
+/* =========================
+   MARCA
+   ========================= */
 
 .footer__brand {
   max-width: 320px;
@@ -41,6 +50,7 @@
 }
 
 .footer__brand p {
+  max-width: 280px;
   margin-top: 1rem;
 
   color: var(--color-text-muted);
@@ -50,8 +60,13 @@
   line-height: 1.7;
 }
 
+/* =========================
+   TÍTULOS
+   ========================= */
+
 .footer__navigation h2,
-.footer__contact h2 {
+.footer__contact h2,
+.footer__information h2 {
   margin-bottom: 1rem;
 
   color: var(--color-primary);
@@ -61,15 +76,26 @@
   font-weight: 700;
 }
 
-.footer__navigation ul {
+/* =========================
+   LISTAS
+   ========================= */
+
+.footer__navigation ul,
+.footer__information ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   gap: 0.65rem;
 }
 
+/* =========================
+   ENLACES
+   ========================= */
+
 .footer__navigation a,
-.footer__contact a {
+.footer__contact a,
+.footer__information a {
   color: var(--color-text-muted);
 
   font-size: 0.9rem;
@@ -79,9 +105,14 @@
 }
 
 .footer__navigation a:hover,
-.footer__contact a:hover {
+.footer__contact a:hover,
+.footer__information a:hover {
   color: var(--color-accent);
 }
+
+/* =========================
+   CONTACTO
+   ========================= */
 
 .footer__contact {
   display: flex;
@@ -100,6 +131,22 @@
 .footer__contact a + a {
   margin-top: 0.65rem;
 }
+
+/* =========================
+   LIBRO DE RECLAMACIONES
+   ========================= */
+
+.footer__claims {
+  color: var(--color-primary) !important;
+}
+
+.footer__claims:hover {
+  color: var(--color-accent) !important;
+}
+
+/* =========================
+   PARTE INFERIOR
+   ========================= */
 
 .footer__bottom {
   width: min(
@@ -122,35 +169,128 @@
   font-weight: 600;
 }
 
-@media (max-width: 800px) {
+/* =========================
+   REDES SOCIALES
+   ========================= */
+
+.footer__socials {
+  margin-top: 1.5rem;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+}
+
+.footer__socials a {
+  width: 44px;
+  height: 44px;
+
+  display: block;
+
+  flex: 0 0 44px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  transition: transform var(--transition-fast);
+}
+
+.footer__socials a:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.footer__socials img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+/* =========================
+   ICONOS DE CONTACTO
+   ========================= */
+
+.footer__contact {
+  gap: 0.8rem;
+}
+
+.footer__contact h2 {
+  margin-bottom: 0.2rem;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.footer__contact-item img {
+  width: 30px;
+  height: 30px;
+
+  flex: 0 0 30px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+.footer__contact-item span {
+  line-height: 1.4;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1000px) {
   .footer__container {
     padding-block: 3rem;
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.5rem;
-  }
 
-  .footer__brand {
-    grid-column: 1 / -1;
+    gap: 2.5rem 3rem;
   }
 }
 
+/* =========================
+   MÓVIL
+   ========================= */
+
 @media (max-width: 520px) {
   .footer__container {
-    width: min(
-      calc(100% - 2rem),
-      var(--container-max-width)
-    );
+    width: calc(100% - 2rem);
+
+    padding-block: 2.75rem;
 
     grid-template-columns: 1fr;
+
     gap: 2rem;
   }
 
   .footer__brand {
-    grid-column: auto;
+    max-width: none;
   }
 
   .footer__bottom {
     width: calc(100% - 2rem);
+  }
+
+  .footer__bottom p {
+    line-height: 1.5;
   }
 }

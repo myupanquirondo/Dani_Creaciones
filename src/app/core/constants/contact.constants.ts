@@ -7,9 +7,9 @@ export interface ContactInfo {
 }
 
 export const CONTACT_INFO: ContactInfo = {
-  email: '',
-  phone: '',
-  whatsappUrl: '',
+  email: 'danicreaciones@gmail.com',
+  phone: '990 435 729',
+  whatsappUrl: 'https://wa.me/51990435729',
   instagramUrl: '',
   tiktokUrl: '',
 };

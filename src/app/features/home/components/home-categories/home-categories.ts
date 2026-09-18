@@ -1,13 +1,13 @@
 import { Component, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { CATEGORIES } from '../../../categories/data/categories.data';
 import { Category } from '../../../categories/models/category.model';
-import { CategoryCard } from '../../../categories/components/category-card/category-card';
 import { SectionTitle } from '../../../../shared/ui/section-title/section-title';
 
 @Component({
   selector: 'app-home-categories',
-  imports: [CategoryCard, SectionTitle],
+  imports: [RouterLink, SectionTitle],
   templateUrl: './home-categories.html',
   styleUrl: './home-categories.scss',
 })
