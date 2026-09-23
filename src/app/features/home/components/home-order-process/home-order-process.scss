@@ -40,6 +40,23 @@
   gap: 0.65rem;
 }
 
+.order-process__title-decoration {
+  width: 140px;
+  height: auto;
+  flex: 0 0 140px;
+
+  display: block;
+  object-fit: contain;
+}
+
+.order-process__title-decoration--left {
+  transform: translateX(45px);
+}
+
+.order-process__title-decoration--right {
+  transform: translateX(-45px);
+}
+
 .order-process__title h2 {
   color: var(--color-primary);
 
@@ -361,6 +378,15 @@
     gap: 0.35rem;
   }
 
+  .order-process__title-decoration {
+    width: 38px;
+    flex-basis: 38px;
+  }
+
+  .order-process__title-decoration--left,
+  .order-process__title-decoration--right {
+    transform: none;
+  }
   .order-process__title h2 {
     font-size: 1.75rem;
   }

@@ -1,8 +1,25 @@
 <section class="home-categories">
-  <app-section-title
-    title="¿Qué tipo de trabajo necesitas?"
-    subtitle="Explora nuestras categorías y encuentra inspiración para tu próxima creación."
-  />
+  <div class="home-categories__heading">
+    <img
+      class="home-categories__decoration"
+      src="/images/categories/icons/decoracion_rosa.png"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <app-section-title
+      title="¿Qué tipo de trabajo necesitas?"
+      subtitle="Explora nuestras categorías y encuentra inspiración para tu próxima creación."
+      [compact]="true"
+    />
+
+    <img
+      class="home-categories__decoration"
+      src="/images/categories/icons/decoracion_amarilla.png"
+      alt=""
+      aria-hidden="true"
+    />
+  </div>
 
   <div class="home-categories__grid">
     @for (category of categories(); track category.id) {

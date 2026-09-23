@@ -175,13 +175,14 @@
 }
 
 .home-about__message img {
-  width: 100%;
-  max-width: 220px;
+  width: 280px;
+  max-width: none;
   height: auto;
 
   display: block;
-
   object-fit: contain;
+
+  transform: translateX(-60px);
 }
 
 /* =========================

@@ -9,4 +9,5 @@ import { Component, input } from '@angular/core';
 export class SectionTitle {
   readonly title = input.required<string>();
   readonly subtitle = input<string>();
+  readonly compact = input(false);
 }

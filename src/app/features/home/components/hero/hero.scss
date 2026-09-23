@@ -21,6 +21,8 @@
 .hero__content {
   position: relative;
   z-index: 2;
+
+  transform: translateX(50px);
 }
 
 .hero__categories {
@@ -46,7 +48,7 @@
   color: var(--color-primary);
 
   font-family: var(--font-heading);
-  font-size: clamp(2.75rem, 4.4vw, 4.25rem);
+  font-size: clamp(2.4rem, 3.7vw, 3.8rem);
   font-weight: 700;
   line-height: 1.02;
   letter-spacing: -0.04em;
@@ -70,48 +72,42 @@
 
 .hero__actions {
   margin-top: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero__plane {
+  width: 110px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+
+  margin-left: 65px;
 }
 
 .hero__whatsapp {
-  width: fit-content;
-  min-height: 48px;
-  padding: 0.75rem 1.15rem;
+  width: 290px;
+  display: block;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
+  transition: transform var(--transition-fast);
+}
 
-  color: var(--color-text-light);
-  background-color: var(--color-whatsapp);
-
-  border-radius: 0.8rem;
-
-  font-size: 0.9rem;
-  font-weight: 800;
-
-  box-shadow: var(--shadow-sm);
-
-  transition:
-    transform var(--transition-fast),
-    box-shadow var(--transition-fast);
+.hero__whatsapp img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .hero__whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.hero__whatsapp-icon {
-  width: 25px;
-  height: 25px;
-
-  display: grid;
-  place-items: center;
-
-  border: 2px solid currentColor;
-  border-radius: 50%;
-
-  font-size: 0.7rem;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: none;
 }
 
 .hero__benefits {
@@ -144,25 +140,8 @@
   height: 48px;
   flex: 0 0 48px;
 
-  display: grid;
-  place-items: center;
-
-  color: var(--color-primary);
-  background-color: var(--color-accent-soft);
-
-  border-radius: 50%;
-
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.hero__benefit:nth-child(2) .hero__benefit-icon {
-  background-color: var(--color-background-purple);
-}
-
-.hero__benefit:nth-child(3) .hero__benefit-icon {
-  background-color: var(--color-background-blue);
+  display: block;
+  object-fit: contain;
 }
 
 .hero__visual {
@@ -278,9 +257,23 @@
 }
 
 @media (max-width: 600px) {
+
+  .hero__actions {
+    width: 100%;
+    gap: 1rem;
+  }
   .hero__container {
     width: calc(100% - 2rem);
+    max-width: 100%;
     padding-block: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    transform: none;
   }
 
   .hero__categories {
@@ -293,12 +286,14 @@
   }
 
   .hero__description {
+    max-width: 100%;
     font-size: 0.9rem;
+    overflow-wrap: break-word;
   }
 
   .hero__whatsapp {
-    width: 100%;
-    justify-content: center;
+    width: 220px;
+    flex: 0 1 220px;
   }
 
   .hero__benefits {
@@ -354,4 +349,14 @@
 
     font-size: 0.7rem;
   }
+
+  .hero__plane {
+    width: 60px;
+    margin-left: 0;
+    flex: 0 0 60px;
+  }
+}
+
+.hero__benefit-icon--large {
+  transform: scale(1.35);
 }
