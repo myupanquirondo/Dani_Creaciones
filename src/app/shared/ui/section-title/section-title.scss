@@ -34,10 +34,7 @@
 
 @media (max-width: 600px) {
   .section-title {
-    width: min(
-      calc(100% - 2rem),
-      var(--container-max-width)
-    );
+    width: 100%;
 
     padding-top: 3.5rem;
     padding-bottom: 1.5rem;
@@ -45,6 +42,35 @@
 
   .section-title h2 {
     font-size: 2rem;
+  }
+
+  .section-title--compact h2 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .section-title--compact p {
+    max-width: 310px;
+
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .section-title--single-line {
+    padding-top: 0;
+    margin-top: -1rem;
+  }
+
+  .section-title--single-line h2 {
+    font-size: 1.45rem;
+    white-space: nowrap;
+  }
+
+  .section-title--single-line p {
+    max-width: 340px;
+    padding-inline: 1rem;
+    box-sizing: border-box;
   }
 }
 

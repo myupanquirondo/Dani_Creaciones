@@ -214,62 +214,121 @@
 
 @media (max-width: 600px) {
   .home-about {
-    padding-block: 2.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2.75rem;
   }
 
   .home-about__container {
     width: calc(100% - 2rem);
 
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
+
+  /* FOTO GRANDE */
 
   .home-about__image {
+    grid-column: 1;
+
     width: 100%;
     max-width: 360px;
-
     margin-inline: auto;
   }
+
+  /* CONTENIDO */
 
   .home-about__content {
-    text-align: center;
-  }
+    grid-column: 1;
 
-  .home-about__content h2 {
-    justify-content: center;
-
-    font-size: 1.8rem;
-  }
-
-  .home-about__description {
-    margin-inline: auto;
-
-    font-size: 0.8rem;
-  }
-
-  .home-about__values {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-
-  .home-about__value {
-    max-width: 260px;
-
-    margin-inline: auto;
+    width: 100%;
+    min-width: 0;
 
     text-align: left;
   }
 
-  .home-about__message {
-    grid-column: auto;
+  /* TÍTULO CENTRADO */
 
+  .home-about__content h2 {
+    justify-content: center;
+
+    margin-bottom: 0.75rem;
+
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  /* TEXTO + IMAGEN */
+
+  .home-about__description-wrapper {
     width: 100%;
+  }
 
-    margin-inline: auto;
+  .home-about__message {
+    float: right;
+
+    width: 150px;
+
+    margin:
+      0
+      0
+      0.5rem
+      1rem;
   }
 
   .home-about__message img {
     width: 100%;
-    max-width: 190px;
+    max-width: 150px;
+    height: auto;
+
+    transform: none;
+  }
+
+  .home-about__description {
+    max-width: none;
+
+    margin: 0;
+
+    font-size: 0.9rem;
+    line-height: 1.55;
+
+    text-align: left;
+  }
+
+  /* VALORES */
+
+  .home-about__values {
+    grid-column: 1;
+
+    width: 100%;
+    margin-top: 0.75rem;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+
+    clear: both;
+  }
+
+  .home-about__value {
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+
+    flex-direction: column;
+    gap: 0.4rem;
+
+    text-align: center;
+  }
+
+  .home-about__value-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+
+    margin-inline: auto;
+  }
+
+  .home-about__value p {
+    font-size: 0.68rem;
+    line-height: 1.25;
   }
 }
