@@ -24,51 +24,37 @@
   margin-inline: auto;
 }
 
-/* =========================
-   TÍTULO
-   ========================= */
-
 .order-process__header {
   margin-bottom: 2rem;
   text-align: center;
 }
 
 .order-process__title {
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: 45px minmax(0, 1fr) 45px;
-
+  display: flex;
   align-items: center;
-  gap: 0;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .order-process__title-decoration {
-  width: 55px;
-  max-width: 100%;
+  width: clamp(70px, 8vw, 140px);
   height: auto;
+  flex-shrink: 1;
 
   display: block;
   object-fit: contain;
 }
 
-.order-process__title-decoration--left {
-  justify-self: start;
-  transform: none;
-}
-
-.order-process__title-decoration--right {
-  justify-self: end;
-  transform: none;
-}
-
 .order-process__title h2 {
-  min-width: 0;
+  flex: 0 1 auto;
 
-  font-size: clamp(1.25rem, 5.5vw, 1.5rem);
-  line-height: 1.2;
+  color: var(--color-primary);
 
-  white-space: normal;
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+
   text-align: center;
 }
 
@@ -80,10 +66,6 @@
   font-size: 0.85rem;
   font-weight: 600;
 }
-
-/* =========================
-   PASOS
-   ========================= */
 
 .order-process__steps {
   display: grid;
@@ -123,10 +105,6 @@
   box-shadow: var(--shadow-md);
 }
 
-/* =========================
-   IMÁGENES DE LOS PASOS
-   ========================= */
-
 .order-process__icon {
   width: 78px;
   height: 78px;
@@ -147,10 +125,6 @@
   display: block;
   object-fit: contain;
 }
-
-/* =========================
-   TEXTO
-   ========================= */
 
 .order-process__step h3 {
   color: var(--color-primary);
@@ -177,10 +151,6 @@
   line-height: 1.45;
 }
 
-/* =========================
-   FLECHAS
-   ========================= */
-
 .order-process__arrow {
   position: absolute;
 
@@ -198,19 +168,14 @@
   transform: translateY(-50%);
 }
 
-/* =========================
-   CTA INFERIOR
-   ========================= */
-
 .order-process__custom {
   margin-top: 2rem;
 
   padding: 1.25rem 1.75rem;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(100px, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-
   gap: 2rem;
 
   background-color: #fff0f6;
@@ -220,27 +185,24 @@
 }
 
 .order-process__custom-content {
-  display: flex;
-  align-items: center;
-
-  gap: 1rem;
-
   min-width: 0;
+
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
 }
 
 .order-process__custom-plane {
   width: 80px;
   height: 80px;
 
-  flex: 0 0 80px;
-
   display: block;
   object-fit: contain;
 }
 
-/* Mueve el texto un poco hacia la derecha en escritorio */
 .order-process__custom-text {
-  transform: translateX(60px);
+  min-width: 0;
 }
 
 .order-process__custom-text h3 {
@@ -276,15 +238,8 @@
   line-height: 1.5;
 }
 
-/* =========================
-   LÍNEA DECORATIVA
-   ========================= */
-
 .order-process__custom-decoration {
-  flex: 1;
-
-  min-width: 100px;
-  max-width: 420px;
+  min-width: 0;
 
   display: flex;
   align-items: center;
@@ -293,19 +248,15 @@
 
 .order-process__custom-decoration img {
   width: 100%;
+  max-width: 420px;
   height: auto;
 
   display: block;
   object-fit: contain;
 }
 
-/* =========================
-   BOTÓN WHATSAPP EN IMAGEN
-   ========================= */
-
 .order-process__whatsapp {
-  width: 290px;
-  flex: 0 0 290px;
+  width: clamp(210px, 20vw, 290px);
 
   display: block;
 
@@ -316,8 +267,6 @@
   border: 0;
   border-radius: 0;
   box-shadow: none;
-
-  transform: translateX(-30px);
 
   transition: transform var(--transition-fast);
 }
@@ -335,10 +284,6 @@
   box-shadow: none;
 }
 
-/* =========================
-   TABLET
-   ========================= */
-
 @media (max-width: 1000px) {
   .order-process__steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -349,23 +294,18 @@
     display: none;
   }
 
-  .order-process__custom-text {
-    transform: translateX(20px);
+  .order-process__custom {
+    grid-template-columns: minmax(0, 1fr) auto;
   }
 
   .order-process__custom-decoration {
-    max-width: 260px;
+    display: none;
   }
 
   .order-process__whatsapp {
     width: 210px;
-    flex-basis: 210px;
   }
 }
-
-/* =========================
-   MÓVIL
-   ========================= */
 
 @media (max-width: 600px) {
   .order-process {
@@ -382,46 +322,36 @@
   }
 
   .order-process__title {
-    width: 100%;
-
     display: grid;
-    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    grid-template-columns:
+      clamp(38px, 12vw, 50px)
+      minmax(0, 1fr)
+      clamp(38px, 12vw, 50px);
 
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.35rem;
   }
 
   .order-process__title-decoration {
-    width: 40px;
-    max-width: 100%;
-    height: auto;
-
-    display: block;
-    object-fit: contain;
-  }
-
-  .order-process__title-decoration--left {
-    justify-self: start;
-    transform: none;
-  }
-
-  .order-process__title-decoration--right {
-    justify-self: end;
-    transform: none;
+    width: 100%;
+    max-width: 50px;
   }
 
   .order-process__title h2 {
     min-width: 0;
 
-    font-size: clamp(1.25rem, 5.5vw, 1.5rem);
+    font-size: clamp(1.3rem, 6vw, 1.5rem);
     line-height: 1.2;
 
-    white-space: normal;
     text-align: center;
   }
 
   .order-process__header p {
+    max-width: 300px;
+    margin-inline: auto;
+
     font-size: 0.78rem;
+    line-height: 1.45;
   }
 
   .order-process__steps {
@@ -435,7 +365,7 @@
     padding: 1rem;
 
     display: grid;
-    grid-template-columns: 64px 1fr;
+    grid-template-columns: 64px minmax(0, 1fr);
     grid-template-rows: auto auto;
 
     column-gap: 0.9rem;
@@ -459,6 +389,8 @@
     grid-column: 2;
     grid-row: 1;
 
+    min-width: 0;
+
     align-self: end;
 
     font-size: 0.9rem;
@@ -477,13 +409,12 @@
     font-size: 0.74rem;
   }
 
-  /* CTA */
-
   .order-process__custom {
     margin-top: 1.25rem;
 
     padding: 1.2rem;
 
+    display: flex;
     flex-direction: column;
     align-items: stretch;
 
@@ -493,34 +424,48 @@
   }
 
   .order-process__custom-content {
-    position: relative;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+    width: 100%;
 
-  .order-process__custom-text {
-    transform: none;
-  }
+    display: grid;
+    grid-template-columns: clamp(48px, 15vw, 60px) minmax(0, 1fr);
+    align-items: center;
 
-  .order-process__custom-text h3,
-  .order-process__custom-highlight {
-    transform: translateX(35px);
-  }
-
-  .order-process__custom-text p {
-    margin-inline: auto;
+    gap: 0.65rem;
   }
 
   .order-process__custom-plane {
-    position: absolute;
+    position: static;
 
-    width: 55px;
-    height: 55px;
+    width: 100%;
+    max-width: 60px;
+    height: auto;
 
-    top: -10px;
-    left: 5px;
+    align-self: start;
+  }
 
-    object-fit: contain;
+  .order-process__custom-text {
+    min-width: 0;
+
+    text-align: left;
+  }
+
+  .order-process__custom-text h3 {
+    font-size: clamp(1rem, 4.7vw, 1.15rem);
+    line-height: 1.25;
+  }
+
+  .order-process__custom-highlight {
+    margin-top: 0.2rem;
+
+    font-size: clamp(0.82rem, 4vw, 0.95rem);
+    line-height: 1.3;
+  }
+
+  .order-process__custom-description {
+    margin-top: 0.3rem;
+
+    font-size: 0.78rem;
+    line-height: 1.45;
   }
 
   .order-process__custom-decoration {
@@ -529,9 +474,7 @@
 
   .order-process__whatsapp {
     width: min(100%, 240px);
-    flex-basis: auto;
-    margin-inline: auto;
 
-    transform: none;
+    margin-inline: auto;
   }
 }

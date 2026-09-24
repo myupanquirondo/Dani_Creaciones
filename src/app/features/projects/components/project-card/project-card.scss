@@ -22,21 +22,16 @@
 .project-card__image-link {
   display: block;
   overflow: hidden;
-
-  background-color: var(--color-background-pink);
+  background-color: #ffffff;
 }
 
 .project-card__image-link img {
   width: 100%;
   aspect-ratio: 4 / 3;
-
-  object-fit: cover;
-
+  display: block;
+  object-fit: contain;
+  background-color: #ffffff;
   transition: transform var(--transition-normal);
-}
-
-.project-card:hover .project-card__image-link img {
-  transform: scale(1.03);
 }
 
 .project-card__content {
