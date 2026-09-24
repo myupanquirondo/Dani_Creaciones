@@ -45,15 +45,21 @@
   }
 
   .section-title--compact h2 {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    white-space: nowrap;
+    max-width: 290px;
+    margin-inline: auto;
+
+    font-size: clamp(1.15rem, 5vw, 1.25rem);
+    line-height: 1.25;
+
+    white-space: normal;
   }
 
   .section-title--compact p {
-    max-width: 310px;
+    max-width: 320px;
+    padding-inline: 0.5rem;
+    margin-inline: auto;
 
-    font-size: 1rem;
+    font-size: clamp(0.85rem, 3.8vw, 1rem);
     line-height: 1.5;
   }
 

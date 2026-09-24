@@ -12,17 +12,69 @@
     <section class="project-detail__summary">
 
       <div class="project-detail__cover">
-        @if (currentProject.coverImage) {
-          <img
-            [src]="currentProject.coverImage"
-            [alt]="currentProject.title"
-          />
+
+        @if (currentImage(); as image) {
+
+          <div class="project-detail__carousel">
+
+            <img
+              [src]="image"
+              [alt]="currentProject.title"
+            />
+
+            @if (currentProject.images.length > 1) {
+
+              <button
+                type="button"
+                class="project-detail__carousel-button project-detail__carousel-button--previous"
+                aria-label="Imagen anterior"
+                (click)="previousImage()"
+              >
+                ‹
+              </button>
+
+              <button
+                type="button"
+                class="project-detail__carousel-button project-detail__carousel-button--next"
+                aria-label="Imagen siguiente"
+                (click)="nextImage()"
+              >
+                ›
+              </button>
+
+            }
+
+          </div>
+
+          @if (currentProject.images.length > 1) {
+            <div class="project-detail__carousel-dots">
+
+              @for (
+                image of currentProject.images;
+                track image;
+                let index = $index
+              ) {
+                <button
+                  type="button"
+                  class="project-detail__carousel-dot"
+                  [class.project-detail__carousel-dot--active]="currentImageIndex() === index"
+                  [attr.aria-label]="'Ver imagen ' + (index + 1)"
+                  (click)="selectImage(index)"
+                ></button>
+              }
+
+            </div>
+          }
+
         } @else {
+
           <div class="project-detail__cover-placeholder">
             <span>✦</span>
             <p>Foto próximamente</p>
           </div>
+
         }
+
       </div>
 
       <div class="project-detail__information">
@@ -74,15 +126,6 @@
 
       </div>
 
-    </section>
-
-    <section class="project-detail__gallery">
-      <h2>Galería del proyecto</h2>
-
-      <app-project-gallery
-        [images]="currentProject.images"
-        [projectTitle]="currentProject.title"
-      />
     </section>
 
   </article>

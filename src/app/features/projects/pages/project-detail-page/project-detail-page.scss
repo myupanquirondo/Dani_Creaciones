@@ -49,6 +49,109 @@
   top: 2rem;
 }
 
+/* =========================
+   CARRUSEL
+   ========================= */
+
+.project-detail__carousel {
+  position: relative;
+  width: 100%;
+}
+
+.project-detail__carousel img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* FLECHAS */
+
+.project-detail__carousel-button {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.92);
+
+  border: none;
+  border-radius: 50%;
+
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-50%);
+
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.project-detail__carousel-button:hover {
+  background-color: #ffffff;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.project-detail__carousel-button--previous {
+  left: 1rem;
+}
+
+.project-detail__carousel-button--next {
+  right: 1rem;
+}
+
+/* PUNTOS */
+
+.project-detail__carousel-dots {
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.55rem;
+}
+
+.project-detail__carousel-dot {
+  width: 10px;
+  height: 10px;
+
+  padding: 0;
+
+  background-color: var(--color-border);
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.project-detail__carousel-dot--active {
+  background-color: var(--color-accent);
+  transform: scale(1.25);
+}
+
 .project-detail__cover img,
 .project-detail__cover-placeholder {
   width: 100%;
@@ -199,22 +302,6 @@
   box-shadow: var(--shadow-md);
 }
 
-.project-detail__gallery {
-  margin-top: 5rem;
-}
-
-.project-detail__gallery > h2 {
-  margin-bottom: 1.5rem;
-
-  color: var(--color-primary);
-
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 700;
-
-  text-align: center;
-}
-
 .project-detail__not-found {
   width: min(
     calc(100% - (var(--container-padding) * 2)),
@@ -276,13 +363,28 @@
     grid-template-columns: 1fr;
   }
 
-  .project-detail__gallery {
-    margin-top: 3.5rem;
-  }
-
   .project-detail__not-found {
     width: calc(100% - 2rem);
     min-height: 50vh;
     padding-block: 3.5rem;
+  }
+
+  .project-detail__carousel-button {
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.7rem;
+  }
+
+  .project-detail__carousel-button--previous {
+    left: 0.75rem;
+  }
+
+  .project-detail__carousel-button--next {
+    right: 0.75rem;
+  }
+
+  .project-detail__carousel-dots {
+    margin-top: 0.8rem;
   }
 }
