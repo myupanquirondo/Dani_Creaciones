@@ -10,9 +10,164 @@
         [step]="orderStep.step"
         [title]="orderStep.title"
         [description]="orderStep.description"
+        [image]="orderStep.image"
       />
     } @empty {
       <p>Próximamente encontrarás aquí el proceso para realizar tu pedido.</p>
     }
   </div>
+
+  <!-- INFORMACIÓN Y EJEMPLO DE MENSAJE -->
+  <div class="how-to-order-page__details">
+
+    <!-- Información necesaria -->
+    <article class="order-info">
+      <h2>¿Qué información necesitas enviar? <span>♡</span></h2>
+
+      <p class="order-info__intro">
+        Para darte una mejor cotización, indícanos:
+      </p>
+
+      <ul class="order-info__list">
+        <li><span>▣</span> Tema del trabajo</li>
+        <li><span>▣</span> Nivel (primaria, secundaria, etc.)</li>
+        <li><span>▣</span> Tamaño aproximado (si lo sabes)</li>
+        <li><span>▣</span> Materiales o ideas específicas (opcional)</li>
+        <li><span>▣</span> Fecha de entrega</li>
+        <li><span>▣</span> Foto de referencia (si tienes)</li>
+      </ul>
+
+      <div class="order-info__note">
+        ¡Mientras más detalles nos des,<br>
+        mejor podremos ayudarte! ♡
+      </div>
+    </article>
+
+    <!-- Ejemplo de mensaje -->
+    <article class="order-message">
+      <h2>Ejemplo de mensaje <span>♡</span></h2>
+
+      <div class="order-message__bubble">
+        <p>Hola 😊</p>
+
+        <p>
+          Quisiera una maqueta del sistema solar para un trabajo.
+          Es para nivel secundaria. Me gustaría que tenga los planetas
+          con sus nombres.
+        </p>
+
+        <p>
+          La necesito para el 15 de octubre.<br>
+          Adjunto una imagen de referencia.
+        </p>
+      </div>
+
+      <a
+        class="order-message__whatsapp"
+        href="https://wa.me/51990435729"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>◉</span>
+        Enviar mi pedido por WhatsApp
+        <strong>→</strong>
+      </a>
+    </article>
+
+  </div>
+
+  <!-- CONSEJOS -->
+  <section class="order-tips">
+    <div class="order-tips__title">
+      <span class="order-tips__bulb">💡</span>
+      <h2>Consejos para un mejor resultado</h2>
+      <span class="order-tips__heart">♡</span>
+    </div>
+
+    <div class="order-tips__grid">
+
+      <article class="order-tip">
+        <div class="order-tip__icon">▧</div>
+
+        <div>
+          <h3>Envía imágenes de referencia</h3>
+          <p>Nos ayuda a entender mejor lo que necesitas.</p>
+        </div>
+      </article>
+
+      <article class="order-tip">
+        <div class="order-tip__icon">▣</div>
+
+        <div>
+          <h3>Indica tu fecha con tiempo</h3>
+          <p>Así podemos organizar mejor la elaboración.</p>
+        </div>
+      </article>
+
+      <article class="order-tip">
+        <div class="order-tip__icon">☵</div>
+
+        <div>
+          <h3>Cuéntanos tus ideas</h3>
+          <p>Si tienes alguna idea especial, dinos. ¡Nos encantan los retos creativos!</p>
+        </div>
+      </article>
+
+      <article class="order-tip">
+        <div class="order-tip__icon">☆</div>
+
+        <div>
+          <h3>Confía en nuestro trabajo</h3>
+          <p>Cada proyecto lo hacemos con dedicación y detalle.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="order-final-cta">
+    <div class="order-final-cta__content">
+
+      <div class="order-final-cta__intro">
+        <img
+          class="order-final-cta__plane"
+          src="/images/how-to-order/avion_papel_2.png"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <div class="order-final-cta__text">
+          <h2>¿Listo para pedir tu proyecto?</h2>
+
+          <p>
+            Escríbenos ahora por WhatsApp y cuéntanos tu idea.<br />
+            ¡Estamos para ayudarte!
+          </p>
+        </div>
+      </div>
+
+      <img
+        class="order-final-cta__line"
+        src="/images/how-to-order/linea_decorativa_pedido.png"
+        alt=""
+        aria-hidden="true"
+      />
+
+      <a
+        class="order-final-cta__whatsapp-link"
+        href="https://wa.me/51990435729"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Cotizar ahora por WhatsApp"
+      >
+        <img
+          class="order-final-cta__whatsapp-image"
+          src="/images/how-to-order/boton_cotizar_whatsapp.png"
+          alt="Cotizar ahora por WhatsApp"
+        />
+      </a>
+
+    </div>
+  </section>
 </section>

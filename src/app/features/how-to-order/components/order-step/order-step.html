@@ -3,6 +3,12 @@
     {{ step() }}
   </span>
 
+  <img
+    class="order-step__image"
+    [src]="image()"
+    [alt]="title()"
+  />
+
   <div class="order-step__content">
     <h3>{{ title() }}</h3>
 

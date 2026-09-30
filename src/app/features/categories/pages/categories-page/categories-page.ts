@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { CATEGORIES } from '../../data/categories.data';
 import { Category } from '../../models/category.model';
@@ -7,7 +8,11 @@ import { SectionTitle } from '../../../../shared/ui/section-title/section-title'
 
 @Component({
   selector: 'app-categories-page',
-  imports: [CategoryCard, SectionTitle],
+  imports: [
+    RouterLink,
+    CategoryCard,
+    SectionTitle,
+  ],
   templateUrl: './categories-page.html',
   styleUrl: './categories-page.scss',
 })

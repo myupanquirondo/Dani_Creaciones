@@ -1,7 +1,85 @@
 <section class="categories-page">
+
+  <!-- HERO -->
+  <section class="categories-hero">
+    <div class="categories-hero__container">
+
+      <div class="categories-hero__content">
+
+        <nav
+          class="categories-hero__breadcrumb"
+          aria-label="Ruta de navegación"
+        >
+          <a routerLink="/">Inicio</a>
+          <span aria-hidden="true">›</span>
+          <span>Categorías</span>
+        </nav>
+
+        <h1>
+          Categorías
+          <span>♡</span>
+        </h1>
+
+        <p class="categories-hero__description">
+          Explora todos los tipos de trabajos que realizamos.
+          Cada proyecto es personalizado con dedicación,
+          creatividad y mucho detalle.
+        </p>
+
+        <div class="categories-hero__benefits">
+
+          <div class="categories-hero__benefit">
+            <span class="categories-hero__benefit-icon">☆</span>
+            <p>
+              Trabajos únicos<br />
+              y personalizados
+            </p>
+          </div>
+
+          <div class="categories-hero__benefit">
+            <span class="categories-hero__benefit-icon">♡</span>
+            <p>
+              Materiales de<br />
+              calidad
+            </p>
+          </div>
+
+          <div class="categories-hero__benefit">
+            <span class="categories-hero__benefit-icon">☺</span>
+            <p>
+              Para todas<br />
+              las edades
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- IMAGEN PRINCIPAL -->
+      <div class="categories-hero__visual">
+        <img
+          class="categories-hero__image"
+          src="/images/categories/categorias-hero.png"
+          alt="Materiales creativos utilizados en Dani Creaciones"
+        />
+
+        <!-- POST-IT INDEPENDIENTE -->
+        <img
+          class="categories-hero__note"
+          src="/images/categories/categorias-nota.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS -->
   <app-section-title
-    title="Categorías"
-    subtitle="Explora nuestras categorías y encuentra el tipo de creación ideal para ese momento especial."
+    title="Nuestras categorías"
+    subtitle="Elige una categoría para ver todos los trabajos relacionados."
   />
 
   <div class="categories-page__grid">
@@ -11,4 +89,5 @@
       <p>Aún no hay categorías disponibles.</p>
     }
   </div>
+
 </section>
