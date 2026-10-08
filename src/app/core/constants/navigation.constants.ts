@@ -1,3 +1,4 @@
+
 export interface NavigationItem {
   readonly label: string;
   readonly route: string;
@@ -19,13 +20,5 @@ export const NAVIGATION_ITEMS: readonly NavigationItem[] = [
   {
     label: '¿Cómo pedir?',
     route: '/como-pedir',
-  },
-  {
-    label: 'Sobre mí',
-    route: '/sobre-mi',
-  },
-  {
-    label: 'Contacto',
-    route: '/contacto',
   },
 ];
