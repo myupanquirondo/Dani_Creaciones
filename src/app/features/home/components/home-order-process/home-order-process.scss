@@ -1,5 +1,5 @@
 .order-process {
-  padding-block: 3.25rem 3rem;
+  padding-block: 1.5rem 3rem;
 
   background:
     radial-gradient(
@@ -51,20 +51,22 @@
   color: var(--color-primary);
 
   font-family: var(--font-heading);
-  font-size: clamp(1.9rem, 2.5vw, 2.5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
+  letter-spacing: -0.03em;
 
   text-align: center;
 }
 
 .order-process__header p {
-  margin-top: 0.45rem;
+  margin-top: 0.75rem;
 
   color: var(--color-text-muted);
 
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
+  line-height: 1.6;
 }
 
 .order-process__steps {
@@ -309,7 +311,7 @@
 
 @media (max-width: 600px) {
   .order-process {
-    padding-top: 2.75rem;
+    padding-top: 1.25rem;
     padding-bottom: 1rem;
   }
 
