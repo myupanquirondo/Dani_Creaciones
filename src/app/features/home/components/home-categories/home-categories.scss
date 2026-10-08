@@ -1,5 +1,5 @@
 .home-categories {
-  padding-bottom: 4.5rem;
+  padding-bottom: 1.5rem;
   background-color: var(--color-background);
 }
 
@@ -96,16 +96,16 @@
 }
 
 .home-categories__decoration:first-child {
-  transform: translateX(90px);
+  transform: translate(90px, -10px);
 }
 
 .home-categories__decoration:last-child {
-  transform: translateX(-90px);
+  transform: translate(-90px, -12px);
 }
 
 @media (max-width: 600px) {
   .home-categories {
-    padding-bottom: 3.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .home-categories__heading {
