@@ -1,6 +1,6 @@
+
 .home-cta {
   padding: 4.5rem var(--container-padding);
-
   background-color: var(--color-accent);
 }
 
@@ -36,8 +36,32 @@
   line-height: 1.7;
 }
 
-.home-cta app-button {
+/* BOTÓN WHATSAPP */
+.home-cta__whatsapp {
   margin-top: 1.75rem;
+  padding: 0.85rem 1.75rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-accent);
+  background-color: #fff;
+
+  border-radius: var(--radius-pill);
+
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.home-cta__whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 600px) {

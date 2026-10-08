@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 
 import { MainLayout } from './core/layout/main-layout/main-layout';
@@ -41,20 +42,6 @@ export const routes: Routes = [
           import(
             './features/how-to-order/pages/how-to-order-page/how-to-order-page'
           ).then((m) => m.HowToOrderPage),
-      },
-      {
-        path: 'sobre-mi',
-        loadComponent: () =>
-          import('./features/about/pages/about-page/about-page').then(
-            (m) => m.AboutPage
-          ),
-      },
-      {
-        path: 'contacto',
-        loadComponent: () =>
-          import('./features/contact/pages/contact-page/contact-page').then(
-            (m) => m.ContactPage
-          ),
       },
       {
         path: '**',
