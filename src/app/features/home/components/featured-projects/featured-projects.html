@@ -1,7 +1,47 @@
 <section class="featured-projects">
-  @for (project of featuredProjects(); track project.id) {
-    <app-project-card [project]="project" />
-  } @empty {
+
+  @if (featuredProjects().length > 0) {
+
+    <div class="featured-projects__wrapper">
+
+      <button
+        class="featured-projects__arrow featured-projects__arrow--left"
+        type="button"
+        aria-label="Ver proyecto anterior"
+        (click)="previous()"
+      >
+        ‹
+      </button>
+
+      <div
+        #carousel
+        class="featured-projects__carousel"
+        (scroll)="onScroll()"
+        (touchstart)="onUserInteraction()"
+        (pointerdown)="onUserInteraction()"
+      >
+
+        @for (project of carouselProjects(); track $index) {
+          <div class="featured-projects__item">
+            <app-project-card [project]="project" />
+          </div>
+        }
+
+      </div>
+
+      <button
+        class="featured-projects__arrow featured-projects__arrow--right"
+        type="button"
+        aria-label="Ver siguiente proyecto"
+        (click)="next()"
+      >
+        ›
+      </button>
+
+    </div>
+
+  } @else {
     <p>Aún no hay proyectos destacados.</p>
   }
+
 </section>
