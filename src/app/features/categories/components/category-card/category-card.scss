@@ -119,3 +119,50 @@
 
   box-shadow: var(--shadow-sm);
 }
+
+/* =========================
+   MÓVIL
+   ========================= */
+
+@media (max-width: 600px) {
+  .category-card {
+    min-width: 0;
+  }
+
+  .category-card > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .category-card__content {
+    padding: 0.75rem;
+  }
+
+  .category-card__content h3 {
+    font-size: 0.95rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .category-card__content p {
+    margin-top: 0.4rem;
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+
+  .category-card__content a {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .category-card__placeholder {
+    padding: 0.5rem;
+  }
+
+  .category-card__placeholder span {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
