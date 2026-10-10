@@ -455,7 +455,9 @@
 
   .categories-page__grid {
     width: calc(100% - 2rem);
-    grid-template-columns: 1fr;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
   }
 
   .categories-page__grid > p {
