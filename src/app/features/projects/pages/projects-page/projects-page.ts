@@ -9,9 +9,11 @@ import { ProjectCard } from '../../components/project-card/project-card';
 import { ProjectFilter } from '../../components/project-filter/project-filter';
 import { CATEGORIES } from '../../../categories/data/categories.data';
 
+import { CustomOrderCta } from '../../../../shared/ui/custom-order-cta/custom-order-cta';
+
 @Component({
   selector: 'app-projects-page',
-  imports: [ProjectCard, ProjectFilter, RouterLink],
+  imports: [ProjectCard, ProjectFilter, RouterLink, CustomOrderCta],
   templateUrl: './projects-page.html',
   styleUrl: './projects-page.scss',
 })
