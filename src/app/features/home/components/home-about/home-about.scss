@@ -1,5 +1,6 @@
 .home-about {
-  padding-block: 3.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 1rem;
   background-color: var(--color-background);
 }
 
@@ -235,7 +236,7 @@
 @media (max-width: 600px) {
   .home-about {
     padding-top: 0.5rem;
-    padding-bottom: 2.75rem;
+    padding-bottom: 1rem;
   }
 
   .home-about__container {
