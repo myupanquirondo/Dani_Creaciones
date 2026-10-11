@@ -6,9 +6,11 @@ import { ORDER_STEPS } from '../../data/order-steps.data';
 import { OrderStepData } from '../../models/order-step.model';
 import { OrderStep } from '../../components/order-step/order-step';
 
+import { CustomOrderCta } from '../../../../shared/ui/custom-order-cta/custom-order-cta';
+
 @Component({
   selector: 'app-how-to-order-page',
-  imports: [OrderStep, RouterLink],
+  imports: [OrderStep, RouterLink, CustomOrderCta],
   templateUrl: './how-to-order-page.html',
   styleUrl: './how-to-order-page.scss',
 })
