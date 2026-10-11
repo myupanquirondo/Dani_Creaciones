@@ -6,12 +6,15 @@ import { Category } from '../../models/category.model';
 import { CategoryCard } from '../../components/category-card/category-card';
 import { SectionTitle } from '../../../../shared/ui/section-title/section-title';
 
+import { CustomOrderCta } from '../../../../shared/ui/custom-order-cta/custom-order-cta';
+
 @Component({
   selector: 'app-categories-page',
   imports: [
     RouterLink,
     CategoryCard,
     SectionTitle,
+    CustomOrderCta,
   ],
   templateUrl: './categories-page.html',
   styleUrl: './categories-page.scss',
