@@ -1,12 +1,7 @@
 <section class="projects-page">
-
-  <!-- =========================
-       HERO
-       ========================= -->
   <section class="projects-hero">
     <div class="projects-hero__container">
 
-      <!-- CONTENIDO IZQUIERDO -->
       <div class="projects-hero__content">
 
         <nav
@@ -34,7 +29,6 @@
 
         <div class="projects-hero__benefits">
 
-          <!-- CORAZÓN -->
           <div class="projects-hero__benefit">
             <span
               class="projects-hero__benefit-icon projects-hero__benefit-icon--pink"
@@ -61,7 +55,6 @@
             </p>
           </div>
 
-          <!-- ESTRELLA -->
           <div class="projects-hero__benefit">
             <span
               class="projects-hero__benefit-icon projects-hero__benefit-icon--purple"
@@ -88,7 +81,6 @@
             </p>
           </div>
 
-          <!-- CARITA FELIZ -->
           <div class="projects-hero__benefit">
             <span
               class="projects-hero__benefit-icon projects-hero__benefit-icon--pink"
@@ -129,7 +121,6 @@
 
       </div>
 
-      <!-- IMAGEN DERECHA -->
       <div class="projects-hero__visual">
         <img
           class="projects-hero__image"
@@ -141,18 +132,12 @@
     </div>
   </section>
 
-  <!-- =========================
-       FILTROS
-       ========================= -->
   <app-project-filter
     [categories]="categories()"
     [selectedCategory]="selectedCategory()"
     (categoryChange)="selectCategory($event)"
   />
 
-  <!-- =========================
-       PROYECTOS
-       ========================= -->
   <div class="projects-page__grid">
     @for (project of paginatedProjects(); track project.id) {
       <app-project-card [project]="project" />
@@ -199,10 +184,6 @@
       </button>
     </nav>
   }
-
-  <!-- =========================
-       COTIZACIÓN PERSONALIZADA
-       ========================= -->
   <app-custom-order-cta />
 
 </section>
