@@ -27,10 +27,16 @@
 
 .header__brand {
   display: inline-flex;
-  flex-direction: column;
+  align-items: center;
   flex-shrink: 0;
+}
 
-  line-height: 1;
+.header__logo {
+  display: block;
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .header__brand-name {
@@ -234,11 +240,11 @@
     width: calc(100% - 2rem);
   }
 
-  .header__brand-name {
-    font-size: 1.3rem;
+  .header__brand {
+    min-width: 0;
   }
 
-  .header__tagline {
-    font-size: 0.65rem;
+  .header__logo {
+    width: 220px;
   }
 }
