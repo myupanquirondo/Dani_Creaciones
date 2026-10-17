@@ -534,12 +534,19 @@
 
 .order-hero {
   overflow: hidden;
-  background: linear-gradient(
-    110deg,
-    #fff0f6 0%,
-    #fff8fb 55%,
-    #ffffff 100%
-  );
+
+  background:
+    radial-gradient(
+      circle at 8% 25%,
+      rgb(255 210 231 / 55%),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 52% 90%,
+      rgb(238 226 255 / 60%),
+      transparent 28%
+    ),
+    #fff4f8;
 }
 
 .order-hero__container {
@@ -548,6 +555,7 @@
     var(--container-max-width)
   );
 
+  height: 410px;
   min-height: 350px;
   margin-inline: auto;
 
@@ -662,7 +670,8 @@
 .order-hero__visual {
   position: relative;
   min-width: 0;
-  min-height: 360px;
+  height: 100%;
+  min-height: 350px;
 }
 
 .order-hero__main-image {
@@ -816,5 +825,13 @@
 
   .order-steps-heading p {
     font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .order-hero__container,
+  .order-hero__visual {
+    height: auto;
+    min-height: 350px;
   }
 }
