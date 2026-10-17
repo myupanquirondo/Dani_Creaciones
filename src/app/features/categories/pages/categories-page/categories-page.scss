@@ -10,8 +10,13 @@
   background:
     radial-gradient(
       circle at 8% 25%,
-      rgb(255 210 231 / 45%),
-      transparent 25%
+      rgb(255 210 231 / 55%),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 52% 90%,
+      rgb(238 226 255 / 60%),
+      transparent 28%
     ),
     #fff4f8;
 }
@@ -22,11 +27,14 @@
     var(--container-max-width)
   );
 
+  height: 410px;
   min-height: 350px;
+
   margin-inline: auto;
 
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.85fr);
+
   align-items: stretch;
 }
 
@@ -159,8 +167,6 @@
   min-height: 350px;
 
   overflow: hidden;
-
-  border-radius: 0 0 0 90px;
 }
 
 .categories-hero__image {
