@@ -29,6 +29,7 @@
 
   height: 410px;
   min-height: 350px;
+  position: relative;
 
   margin-inline: auto;
 
@@ -130,8 +131,8 @@
   display: grid;
   place-items: center;
 
-  color: var(--color-primary);
-  background-color: #ffc4df;
+  color: #082d78;
+  background-color: #ffa6cf;
 
   border-radius: 50%;
 }
@@ -144,12 +145,12 @@
 
 .categories-hero__benefit:nth-child(2)
   .categories-hero__benefit-icon {
-  background-color: #ead5ff;
+  background-color: #d9b8ff;
 }
 
 .categories-hero__benefit:nth-child(3)
   .categories-hero__benefit-icon {
-  background-color: #ffd0e8;
+  background-color: #ffa6cf;
 }
 
 .categories-hero__benefit p {
@@ -166,7 +167,7 @@
   min-width: 0;
   min-height: 350px;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
 .categories-hero__image {
@@ -185,9 +186,9 @@
   z-index: 2;
 
   top: 35px;
-  left: 35px;
+  left: -100px;
 
-  width: 175px;
+  width: 190px;
   height: auto;
 
   display: block;
