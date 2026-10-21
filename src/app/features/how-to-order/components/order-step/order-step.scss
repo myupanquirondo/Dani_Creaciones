@@ -18,29 +18,21 @@
     box-shadow var(--transition-normal);
 }
 
-/* =========================
-   COLORES DE CADA PASO
-   ========================= */
-
-/* Paso 1 - WhatsApp */
 :host:nth-child(1) .order-step {
   background-color: #fff1f6;
   border-color: #ffd6e5;
 }
 
-/* Paso 2 - Cotización */
 :host:nth-child(2) .order-step {
   background-color: #eef8ff;
   border-color: #d5edff;
 }
 
-/* Paso 3 - Elaboración */
 :host:nth-child(3) .order-step {
   background-color: #f6f0ff;
   border-color: #e6d8ff;
 }
 
-/* Paso 4 - Entrega */
 :host:nth-child(4) .order-step {
   background-color: #effcf6;
   border-color: #d3f3e3;
@@ -50,10 +42,6 @@
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
-
-/* =========================
-   NÚMERO
-   ========================= */
 
 .order-step__number {
   position: absolute;
@@ -78,9 +66,17 @@
   font-weight: 700;
 }
 
-/* =========================
-   IMAGEN
-   ========================= */
+:host:nth-child(2) .order-step__number {
+  background-color: #36a9e1;
+}
+
+:host:nth-child(3) .order-step__number {
+  background-color: #a675eb;
+}
+
+:host:nth-child(4) .order-step__number {
+  background-color: #42bd88;
+}
 
 .order-step__image {
   width: 76px;
@@ -91,10 +87,6 @@
   display: block;
   object-fit: contain;
 }
-
-/* =========================
-   CONTENIDO
-   ========================= */
 
 .order-step__content h3 {
   color: var(--color-primary);
@@ -116,10 +108,6 @@
   font-weight: 600;
   line-height: 1.5;
 }
-
-/* =========================
-   RESPONSIVE
-   ========================= */
 
 @media (max-width: 700px) {
   .order-step {
