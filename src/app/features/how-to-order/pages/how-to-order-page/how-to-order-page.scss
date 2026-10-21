@@ -647,24 +647,24 @@
   display: grid;
   place-items: center;
 
-  color: #243c80;
-  background-color: #f7a6d2;
+  color: #082d78;
+  background-color: #ffa6cf;
 
   border-radius: 50%;
+}
+
+.order-hero__benefit:nth-child(2) .order-hero__benefit-icon {
+  background-color: #d9b8ff;
+}
+
+.order-hero__benefit:nth-child(3) .order-hero__benefit-icon {
+  background-color: #ffa6cf;
 }
 
 .order-hero__benefit-icon svg {
   width: 22px;
   height: 22px;
   display: block;
-}
-
-.order-hero__benefit:nth-child(2) .order-hero__benefit-icon {
-  background-color: #e9ddff;
-}
-
-.order-hero__benefit:nth-child(3) .order-hero__benefit-icon {
-  background-color: #f9d9ef;
 }
 
 .order-hero__visual {
@@ -691,10 +691,10 @@
   z-index: 1;
 
   width: clamp(125px, 17vw, 220px);
-  max-width: 45%;
+  max-width: 40%;
 
-  top: 15%;
-  left: -8%;
+  top: 7%;
+  left: -18%;
 
   object-fit: contain;
   filter: drop-shadow(0 8px 12px rgb(0 0 0 / 12%));
