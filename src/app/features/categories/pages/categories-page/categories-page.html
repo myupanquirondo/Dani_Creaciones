@@ -124,10 +124,26 @@
     </div>
   </section>
 
-  <app-section-title
-    title="Nuestras categorías"
-    subtitle="Elige una categoría para ver todos los trabajos relacionados."
-  />
+  <div class="categories-page__heading">
+    <img
+      class="categories-page__decoration"
+      src="/images/categories/icons/decoracion_rosa.webp"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <app-section-title
+      title="Nuestras categorías"
+      subtitle="Elige una categoría para ver todos los trabajos relacionados."
+    />
+
+    <img
+      class="categories-page__decoration"
+      src="/images/categories/icons/decoracion_amarilla.webp"
+      alt=""
+      aria-hidden="true"
+    />
+  </div>
 
   <div class="categories-page__grid">
     @for (category of categories(); track category.id) {
