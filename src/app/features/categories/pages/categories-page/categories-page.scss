@@ -252,6 +252,10 @@
   transform: translate(-200px, 8px);
 }
 
+.categories-page__heading app-section-title {
+  --section-title-padding-top: 1.5rem;
+}
+
 @media (max-width: 1000px) {
   .categories-hero__container {
     grid-template-columns: 1fr 0.75fr;
