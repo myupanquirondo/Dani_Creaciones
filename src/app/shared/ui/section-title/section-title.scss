@@ -5,7 +5,7 @@
   );
 
   margin-inline: auto;
-  padding-top: 4.5rem;
+  padding-top: var(--section-title-padding-top, 4.5rem);
   padding-bottom: 2rem;
 
   text-align: center;
