@@ -47,11 +47,9 @@
 
 .order-info,
 .order-message {
-  position: relative;
-
-  padding: 1.5rem;
-
-  border-radius: 18px;
+  background-color: #fff1f6;
+  border: 1px solid #ffdbe8;
+  padding: 1rem 1.5rem;
 }
 
 .order-info {
@@ -159,36 +157,23 @@
 }
 
 .order-message__whatsapp {
-  width: fit-content;
+  width: 320px;
+  max-width: 100%;
+  margin: 0.5rem auto 0;
+  display: block;
+  transition: transform var(--transition-fast);
+}
 
-  margin: 1rem auto 0;
-  padding: 0.7rem 1.2rem;
+.order-message__whatsapp img {
+  width: 100%;
+  height: auto;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-
-  color: #ffffff;
-  background-color: #20bf63;
-
-  border-radius: 999px;
-
-  font-size: 0.75rem;
-  font-weight: 800;
-
-  transition:
-    transform var(--transition-fast),
-    box-shadow var(--transition-fast);
+  display: block;
+  object-fit: contain;
 }
 
 .order-message__whatsapp:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.order-message__whatsapp strong {
-  font-size: 1rem;
 }
 
 .order-tips {
