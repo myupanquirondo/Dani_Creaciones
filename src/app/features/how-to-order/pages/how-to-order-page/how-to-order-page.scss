@@ -326,7 +326,16 @@
 }
 
 .order-tips__bulb {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.order-tips__bulb svg {
+  width: 26px;
+  height: 26px;
+  display: block;
 }
 
 .order-tips__heart {
