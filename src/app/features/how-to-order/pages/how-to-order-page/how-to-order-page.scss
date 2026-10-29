@@ -1,15 +1,9 @@
-// ========================================
-// 1. ESTILOS GENERALES
-// ========================================
-
-// Página
 .how-to-order-page {
   min-height: 60vh;
   padding-bottom: 1rem;
   background-color: var(--color-background);
 }
 
-// Hero
 .order-hero {
   overflow: hidden;
   background:
@@ -145,7 +139,6 @@
   transform: rotate(-6deg);
 }
 
-// Encabezado de pasos
 .order-steps-heading {
   padding: 2.5rem 1rem 1.75rem;
   text-align: center;
@@ -174,7 +167,6 @@
   font-weight: 600;
 }
 
-// Cuadrícula de pasos
 .how-to-order-page__steps {
   width: min(calc(100% - (var(--container-padding) * 2)), var(--container-max-width));
   margin-inline: auto;
@@ -194,7 +186,6 @@
   font-weight: 700;
 }
 
-// Información y ejemplo de mensaje
 .how-to-order-page__details {
   width: min(calc(100% - (var(--container-padding) * 2)), var(--container-max-width));
   margin: 1.5rem auto 0;
@@ -208,15 +199,35 @@
   padding: 1rem 1.5rem;
 }
 
+.order-message__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .order-info {
+  position: relative;
   background-color: #eef8ff;
   border: 1px solid #d9efff;
+  border-radius: 20px;
 }
 
 .order-message {
   padding-bottom: 0.25rem;
   background-color: #fff1f6;
   border: 1px solid #ffdbe8;
+  border-radius: 20px;
+}
+
+.order-message__example-image {
+  width: 50%;
+  max-width: 240px;
+  height: auto;
+  display: block;
+  margin: 0;
+  object-fit: contain;
 }
 
 .order-info h2,
@@ -241,6 +252,7 @@
 
 .order-info__list {
   margin-top: 1rem;
+  padding-left: 1.5rem;
   display: grid;
   gap: 0.65rem;
   list-style: none;
@@ -260,44 +272,24 @@
   font-size: 0.9rem;
 }
 
-.order-info__note {
+.order-info__postit {
   position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  padding: 0.8rem 1rem;
-  color: var(--color-primary);
-  background-color: #ffdce9;
-  border-radius: 4px;
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
-  font-weight: 700;
-  line-height: 1.4;
-  text-align: center;
-  transform: rotate(-4deg);
-  box-shadow: var(--shadow-sm);
-}
+  top: 50%;
+  right: 25%;
 
-.order-message__bubble {
-  max-width: 390px;
-  margin: 1rem auto 0;
-  padding: 1rem;
-  color: #284a3a;
-  background-color: #dcf8df;
-  border: 1px solid #bfeac7;
-  border-radius: 12px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  line-height: 1.45;
-}
+  width: clamp(125px, 15vw, 190px);
+  height: auto;
 
-.order-message__bubble p + p {
-  margin-top: 0.6rem;
+  display: block;
+  object-fit: contain;
+
+  transform: translateY(-50%) rotate(-5deg);
 }
 
 .order-message__whatsapp {
-  width: 320px;
-  max-width: 100%;
-  margin: 0 auto;
+  width: 45%;
+  max-width: 220px;
+  margin: 0;
   display: block;
   transition: transform var(--transition-fast);
 }
@@ -313,7 +305,6 @@
   transform: translateY(-2px);
 }
 
-// Consejos
 .order-tips {
   width: min(calc(100% - (var(--container-padding) * 2)), var(--container-max-width));
   margin: 2.25rem auto 0;
@@ -393,7 +384,6 @@
   line-height: 1.45;
 }
 
-// CTA final (estilos conservados)
 .order-final-cta {
   width: min(calc(100% - (var(--container-padding) * 2)), var(--container-max-width));
   margin: 2.25rem auto 0;
@@ -466,9 +456,6 @@
   object-fit: contain;
 }
 
-// ========================================
-// 2. TABLETS Y PANTALLAS <= 1000px
-// ========================================
 @media (max-width: 1000px) {
   .order-hero__container { grid-template-columns: 1fr 0.75fr; }
   .order-hero__content { padding-right: 2rem; }
@@ -496,9 +483,6 @@
   .order-final-cta__whatsapp-image { width: 230px; }
 }
 
-// ========================================
-// 3. MÓVILES <= 700px
-// ========================================
 @media (max-width: 700px) {
   .order-hero__container { grid-template-columns: 1fr; }
   .order-hero__content { padding: 1.75rem 1rem 2rem; }
@@ -542,10 +526,12 @@
   .order-info,
   .order-message { padding: 1.25rem; }
   .order-message { padding-bottom: 0.25rem; }
-  .order-info__note {
+  .order-info__postit {
     position: static;
-    width: fit-content;
-    margin: 1.25rem 0 0 auto;
+    width: min(55%, 190px);
+    max-width: 100%;
+    margin: 1rem auto 0;
+    transform: rotate(-5deg);
   }
   .order-tips {
     width: calc(100% - 2rem);
@@ -575,11 +561,23 @@
   .order-final-cta__text h2 { font-size: 1.05rem; }
   .order-final-cta__text p { font-size: 0.72rem; }
   .order-final-cta__whatsapp-link { justify-self: center; }
+
+  .order-message__content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .order-message__example-image {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .order-message__whatsapp {
+    width: 100%;
+    max-width: 220px;
+  }
 }
 
-// ========================================
-// 4. AJUSTE EXCLUSIVO PARA 701px - 1000px
-// ========================================
 @media (min-width: 701px) and (max-width: 1000px) {
   .order-hero__container,
   .order-hero__visual {
