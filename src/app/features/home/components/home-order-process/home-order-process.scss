@@ -1,3 +1,4 @@
+
 .order-process {
   padding-block: 1.5rem 3rem;
 
@@ -15,15 +16,16 @@
     #fffafc;
 }
 
+// CONTENEDOR
 .order-process__container {
   width: min(
     calc(100% - (var(--container-padding) * 2)),
     var(--container-max-width)
   );
-
   margin-inline: auto;
 }
 
+// ENCABEZADO
 .order-process__header {
   margin-bottom: 2rem;
   text-align: center;
@@ -40,7 +42,6 @@
   width: clamp(70px, 8vw, 140px);
   height: auto;
   flex-shrink: 1;
-
   display: block;
   object-fit: contain;
 }
@@ -57,13 +58,11 @@
   flex: 0 1 auto;
 
   color: var(--color-primary);
-
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.03em;
-
   text-align: center;
 }
 
@@ -71,12 +70,12 @@
   margin-top: 0.75rem;
 
   color: var(--color-text-muted);
-
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
 }
 
+// PASOS DEL PEDIDO
 .order-process__steps {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -85,10 +84,8 @@
 
 .order-process__step {
   position: relative;
-
   min-width: 0;
   min-height: 190px;
-
   padding: 1.15rem 1rem;
 
   display: flex;
@@ -97,12 +94,9 @@
   justify-content: flex-start;
 
   background-color: rgb(255 255 255 / 92%);
-
   border: 1px solid rgb(231 234 240 / 70%);
   border-radius: 1rem;
-
   text-align: center;
-
   box-shadow: 0 5px 18px rgb(15 42 94 / 6%);
 
   transition:
@@ -118,27 +112,23 @@
 .order-process__icon {
   width: 78px;
   height: 78px;
-
   margin-bottom: 0.55rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex-shrink: 0;
 }
 
 .order-process__icon img {
   width: 100%;
   height: 100%;
-
   display: block;
   object-fit: contain;
 }
 
 .order-process__step h3 {
   color: var(--color-primary);
-
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 700;
@@ -151,11 +141,9 @@
 
 .order-process__step p {
   max-width: 230px;
-
   margin-top: 0.4rem;
 
   color: var(--color-text-muted);
-
   font-size: 0.76rem;
   font-weight: 600;
   line-height: 1.45;
@@ -163,14 +151,11 @@
 
 .order-process__arrow {
   position: absolute;
-
   z-index: 5;
-
   top: 50%;
   right: -2rem;
 
   color: #7757d9;
-
   font-size: 1.8rem;
   font-weight: 800;
   line-height: 1;
@@ -178,9 +163,9 @@
   transform: translateY(-50%);
 }
 
+// MENSAJE PERSONALIZADO
 .order-process__custom {
   margin-top: 2rem;
-
   padding: 1.25rem 1.75rem;
 
   display: grid;
@@ -189,7 +174,6 @@
   gap: 2rem;
 
   background-color: #fff0f6;
-
   border: 1px solid var(--color-accent-soft);
   border-radius: 1rem;
 }
@@ -206,7 +190,6 @@
 .order-process__custom-plane {
   width: 80px;
   height: 80px;
-
   display: block;
   object-fit: contain;
 }
@@ -217,7 +200,6 @@
 
 .order-process__custom-text h3 {
   color: var(--color-primary);
-
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 700;
@@ -228,7 +210,6 @@
   margin-top: 0.2rem;
 
   color: var(--color-primary);
-
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 700;
@@ -237,11 +218,9 @@
 
 .order-process__custom-description {
   max-width: 680px;
-
   margin-top: 0.15rem;
 
   color: var(--color-text-muted);
-
   font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 600;
@@ -260,18 +239,17 @@
   width: 100%;
   max-width: 420px;
   height: auto;
-
   display: block;
   object-fit: contain;
 }
 
+// BOTÓN DE WHATSAPP
 .order-process__whatsapp {
   width: clamp(210px, 20vw, 290px);
-
-  display: block;
-
   min-height: 0;
   padding: 0;
+
+  display: block;
 
   background: transparent;
   border: 0;
@@ -284,7 +262,6 @@
 .order-process__whatsapp img {
   width: 100%;
   height: auto;
-
   display: block;
   object-fit: contain;
 }
@@ -294,13 +271,15 @@
   box-shadow: none;
 }
 
+// TABLETS
 @media (max-width: 1000px) {
   .order-process__steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
   }
 
-  .order-process__arrow {
+  .order-process__arrow,
+  .order-process__custom-decoration {
     display: none;
   }
 
@@ -308,19 +287,15 @@
     grid-template-columns: minmax(0, 1fr) auto;
   }
 
-  .order-process__custom-decoration {
-    display: none;
-  }
-
   .order-process__whatsapp {
     width: 210px;
   }
 }
 
+// CELULARES
 @media (max-width: 600px) {
   .order-process {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
+    padding-block: 1.25rem 1rem;
   }
 
   .order-process__container {
@@ -332,39 +307,22 @@
   }
 
   .order-process__title {
-    display: grid;
-    grid-template-columns:
-      clamp(38px, 12vw, 50px)
-      minmax(0, 1fr)
-      clamp(38px, 12vw, 50px);
-
-    align-items: center;
-    gap: 0.35rem;
+    gap: 0;
   }
 
   .order-process__title-decoration {
-    width: 100%;
-    max-width: 50px;
-  }
-
-  .order-process__title-decoration--left,
-  .order-process__title-decoration--right {
-    transform: none;
+    display: none;
   }
 
   .order-process__title h2 {
     min-width: 0;
-
     font-size: clamp(1.3rem, 6vw, 1.5rem);
     line-height: 1.2;
-
-    text-align: center;
   }
 
   .order-process__header p {
     max-width: 300px;
     margin-inline: auto;
-
     font-size: 0.78rem;
     line-height: 1.45;
   }
@@ -376,91 +334,66 @@
 
   .order-process__step {
     min-height: 0;
-
     padding: 1rem;
 
     display: grid;
     grid-template-columns: 64px minmax(0, 1fr);
     grid-template-rows: auto auto;
-
     column-gap: 0.9rem;
-
     align-items: center;
-
     text-align: left;
   }
 
   .order-process__icon {
     width: 64px;
     height: 64px;
-
     grid-column: 1;
     grid-row: 1 / 3;
-
     margin-bottom: 0;
   }
 
   .order-process__step h3 {
     grid-column: 2;
     grid-row: 1;
-
     min-width: 0;
-
     align-self: end;
-
     font-size: 0.9rem;
   }
 
   .order-process__step p {
     grid-column: 2;
     grid-row: 2;
-
     max-width: none;
-
     margin-top: 0.2rem;
-
     align-self: start;
-
     font-size: 0.74rem;
   }
 
   .order-process__custom {
     margin-top: 1.25rem;
-
     padding: 1.2rem;
 
     display: flex;
     flex-direction: column;
     align-items: stretch;
-
     gap: 1rem;
-
     text-align: center;
   }
 
   .order-process__custom-content {
     width: 100%;
-
-    display: grid;
     grid-template-columns: clamp(48px, 15vw, 60px) minmax(0, 1fr);
-    align-items: center;
-
     gap: 0.65rem;
   }
 
   .order-process__custom-plane {
-    position: static;
-
     width: 100%;
     max-width: 60px;
     height: auto;
-
     align-self: start;
   }
 
   .order-process__custom-text {
-    min-width: 0;
-
     text-align: left;
   }
 
@@ -470,26 +403,17 @@
   }
 
   .order-process__custom-highlight {
-    margin-top: 0.2rem;
-
     font-size: clamp(0.82rem, 4vw, 0.95rem);
-    line-height: 1.3;
   }
 
   .order-process__custom-description {
     margin-top: 0.3rem;
-
     font-size: 0.78rem;
     line-height: 1.45;
   }
 
-  .order-process__custom-decoration {
-    display: none;
-  }
-
   .order-process__whatsapp {
     width: min(100%, 240px);
-
     margin-inline: auto;
   }
 }
