@@ -325,12 +325,24 @@
   font-weight: 700;
 }
 
+
 .order-tips__bulb {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-primary);
+  color: #f5b52e;
 }
+
+.order-tips__bulb svg {
+  width: 30px;
+  height: 30px;
+  display: block;
+  stroke-width: 2.2;
+  filter:
+    drop-shadow(0 0 2px rgb(255 185 45 / 65%))
+    drop-shadow(0 0 5px rgb(255 205 90 / 40%));
+}
+
 
 .order-tips__bulb svg {
   width: 26px;
