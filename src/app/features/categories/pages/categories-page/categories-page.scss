@@ -293,6 +293,7 @@
     display: block;
   }
 
+
   .categories-hero__content {
     position: relative;
     z-index: 3;
@@ -300,8 +301,11 @@
     height: 430px;
     min-height: 0;
 
-    padding: 1.25rem 1rem;
+    padding: 1rem 1rem 0;
+
+    justify-content: flex-start;
   }
+
 
   .categories-hero__breadcrumb {
     position: relative;
