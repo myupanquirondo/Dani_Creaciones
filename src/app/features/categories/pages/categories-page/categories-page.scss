@@ -393,7 +393,7 @@
     height: calc(100% - 85px);
     min-height: 0;
 
-    overflow: hidden;
+    overflow: visible;
     border-radius: 100px 0 0 0;
   }
 
@@ -406,13 +406,15 @@
 
     object-fit: cover;
     object-position: center;
+
+    border-radius: 100px 0 0 0;
   }
 
   .categories-hero__note {
     position: absolute;
     z-index: 5;
 
-    top: 20px;
+    top: -45px;
     left: 50%;
 
     width: 88px;
