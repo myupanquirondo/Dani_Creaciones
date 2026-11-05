@@ -455,19 +455,6 @@
   }
 
   .categories-page__decoration {
-    position: absolute;
-    z-index: 2;
-    top: 1.2rem;
-    width: clamp(45px, 14vw, 60px);
-  }
-
-  .categories-page__decoration:first-child {
-    left: -0.5rem;
-    transform: none;
-  }
-
-  .categories-page__decoration:last-child {
-    right: -0.5rem;
-    transform: none;
+    display: none;
   }
 }
