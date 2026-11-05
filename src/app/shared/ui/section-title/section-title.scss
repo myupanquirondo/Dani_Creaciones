@@ -1,3 +1,4 @@
+
 .section-title {
   width: min(
     calc(100% - (var(--container-padding) * 2)),
@@ -5,6 +6,7 @@
   );
 
   margin-inline: auto;
+
   padding-top: var(--section-title-padding-top, 4.5rem);
   padding-bottom: 2rem;
 
@@ -32,16 +34,25 @@
   line-height: 1.6;
 }
 
+.section-title--compact {
+  padding-top: var(--section-title-padding-top, 2rem);
+  padding-bottom: 1.5rem;
+}
+
 @media (max-width: 600px) {
   .section-title {
     width: 100%;
 
-    padding-top: 3.5rem;
+    padding-top: var(--section-title-padding-top, 3.5rem);
     padding-bottom: 1.5rem;
   }
 
   .section-title h2 {
     font-size: 2rem;
+  }
+
+  .section-title--compact {
+    padding-top: var(--section-title-padding-top, 2rem);
   }
 
   .section-title--compact h2 {
@@ -50,7 +61,6 @@
 
     font-size: 1.45rem;
     line-height: 1.25;
-
     white-space: normal;
   }
 
@@ -78,9 +88,4 @@
     padding-inline: 1rem;
     box-sizing: border-box;
   }
-}
-
-.section-title--compact {
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
 }
