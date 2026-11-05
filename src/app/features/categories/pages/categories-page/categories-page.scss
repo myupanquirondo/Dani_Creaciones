@@ -452,6 +452,8 @@
   .categories-page__heading app-section-title {
     display: block;
     width: 100%;
+
+    --section-title-padding-top: 1rem;
   }
 
   .categories-page__decoration {
