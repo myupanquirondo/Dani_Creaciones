@@ -256,6 +256,10 @@
   --section-title-padding-top: 1.5rem;
 }
 
+.categories-hero__explore {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .categories-hero__container {
     grid-template-columns: 1fr 0.75fr;
@@ -458,5 +462,19 @@
 
   .categories-page__decoration {
     display: none;
+  }
+
+  .categories-hero__explore {
+    position: absolute;
+    z-index: 4;
+
+    bottom: 0.75rem;
+    left: 1rem;
+
+    width: clamp(150px, 48vw, 210px);
+    height: auto;
+
+    display: block;
+    object-fit: contain;
   }
 }
