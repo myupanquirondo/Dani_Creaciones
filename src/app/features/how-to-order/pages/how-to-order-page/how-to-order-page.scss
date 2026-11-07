@@ -461,15 +461,53 @@
 .order-tip:nth-child(3) { background-color: #f5efff; }
 .order-tip:nth-child(4) { background-color: #edfbf5; }
 
+
+
 .order-tip__icon {
   width: 48px;
   height: 48px;
   flex: 0 0 48px;
+
   display: grid;
   place-items: center;
-  color: var(--color-primary);
-  background-color: rgb(255 255 255 / 55%);
-  border-radius: 12px;
+
+  border-radius: 14px;
+}
+
+.order-tip__icon svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  stroke-width: 2.3;
+  filter: drop-shadow(1px 2px 1px rgb(8 45 120 / 18%));
+}
+
+// ROSADO: IMÁGENES
+.order-tip:nth-child(1) .order-tip__icon {
+  color: #a83bbd;
+  background: radial-gradient(circle, #ffd3ec, #ffe8f5);
+  box-shadow: 0 0 10px rgb(233 104 189 / 22%);
+}
+
+// AZUL: CALENDARIO
+.order-tip:nth-child(2) .order-tip__icon {
+  color: #087ac7;
+  background: radial-gradient(circle, #c5ecff, #e2f6ff);
+  box-shadow: 0 0 10px rgb(54 169 225 / 22%);
+}
+
+// MORADO: MENSAJE
+.order-tip:nth-child(3) .order-tip__icon {
+  color: #8349c9;
+  background: radial-gradient(circle, #dfc6ff, #f0e4ff);
+  box-shadow: 0 0 10px rgb(166 117 235 / 22%);
+}
+
+// VERDE: ESTRELLA
+.order-tip:nth-child(4) .order-tip__icon {
+  color: #138b70;
+  background: radial-gradient(circle, #bdf5d5, #e0ffed);
+  box-shadow: 0 0 10px rgb(66 189 136 / 25%);
 }
 
 .order-tip h3 {
