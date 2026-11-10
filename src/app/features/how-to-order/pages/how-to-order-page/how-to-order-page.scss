@@ -362,7 +362,7 @@
   padding: 0.75rem 1rem;
 
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) 1px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.2fr) 2px minmax(0, 1fr);
   align-items: center;
   gap: 1rem;
 
@@ -383,11 +383,12 @@
 }
 
 .order-message__divider {
-  width: 1px;
-  height: 70%;
+  width: 2px;
+  height: 80%;
 
   display: block;
-  background-color: #f7bfd4;
+  background-color: #f28bb5;
+  border-radius: 999px;
 }
 
 .order-message__whatsapp {
