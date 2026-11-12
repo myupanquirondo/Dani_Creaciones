@@ -362,7 +362,7 @@
   padding: 0.75rem 1rem;
 
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) 2px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.2fr) 24px minmax(0, 1fr);
   align-items: center;
   gap: 1rem;
 
@@ -382,14 +382,38 @@
   object-fit: contain;
 }
 
-.order-message__divider {
-  width: 2px;
-  height: 80%;
 
-  display: block;
-  background-color: #f28bb5;
-  border-radius: 999px;
+.order-message__divider {
+  width: 24px;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  color: #f45b9a;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 50%;
+    border-left: 2px dashed #ff8fba;
+    transform: translateX(-50%);
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    line-height: 1;
+    background-color: #fffafd;
+  }
 }
+
 
 .order-message__whatsapp {
   width: 100%;
