@@ -76,6 +76,14 @@
 }
 
 .custom-order-cta__decoration {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-order-cta__decoration img {
   width: 100%;
   max-width: 420px;
   height: auto;
