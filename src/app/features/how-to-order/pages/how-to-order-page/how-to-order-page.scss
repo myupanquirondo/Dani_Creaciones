@@ -350,6 +350,10 @@
   pointer-events: none;
 }
 
+.order-info__postit-mobile {
+  display: none;
+}
+
 .order-message {
 
   background-color: #fff1f6;
@@ -777,14 +781,20 @@
   }
 
   .order-info__postit {
+    display: none;
+  }
+
+  .order-info__postit-mobile {
     order: -1;
 
-    width: min(75%, 240px);
+    display: block;
+    width: min(100%, 340px);
     max-width: 100%;
     height: auto;
     margin: 0 auto;
 
-    transform: rotate(-5deg);
+    object-fit: contain;
+    filter: drop-shadow(0 5px 8px rgb(0 0 0 / 8%));
   }
 
   .order-message__content {
