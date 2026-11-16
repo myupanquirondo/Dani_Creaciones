@@ -1,3 +1,4 @@
+
 <section class="hero">
   <div class="hero__container">
     <div class="hero__content">
@@ -31,12 +32,15 @@
 
         <img
           class="hero__plane"
-          src="/images/hero/avion_papel.webp"
+          src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_140/v1794795918/avion_papel.webp"
           alt=""
           aria-hidden="true"
+          width="1536"
+          height="1024"
+          loading="eager"
+          decoding="async"
         />
       </div>
-
 
       <div class="hero__benefits">
 
@@ -119,16 +123,29 @@
         </div>
 
       </div>
-
     </div>
 
     <div class="hero__visual">
       <div class="hero__image-placeholder">
         <img
-          src="/images/hero/sistema_solar.webp"
+          src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_800/v1794795918/sistema_solar.webp"
+          srcset="
+            https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_400/v1794795918/sistema_solar.webp 400w,
+            https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1794795918/sistema_solar.webp 600w,
+            https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_800/v1794795918/sistema_solar.webp 800w,
+            https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1200/v1794795918/sistema_solar.webp 1200w
+          "
+          sizes="(max-width: 600px) 100vw, (max-width: 850px) 85vw, 45vw"
           alt="Proyecto escolar del sistema solar"
+          width="1536"
+          height="1024"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
         />
       </div>
     </div>
   </div>
 </section>
+
+<!-- PENDIENTE: Agregar estrella.webp cuando se utilice: https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1794795918/estrella.webp -->
