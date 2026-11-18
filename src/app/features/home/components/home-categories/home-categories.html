@@ -1,10 +1,13 @@
+
 <section class="home-categories">
   <div class="home-categories__heading">
     <img
       class="home-categories__decoration"
-      src="/images/categories/icons/decoracion_rosa.webp"
+      src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_400/v1794957754/decoracion_rosa.webp"
       alt=""
       aria-hidden="true"
+      loading="lazy"
+      decoding="async"
     />
 
     <app-section-title
@@ -15,9 +18,11 @@
 
     <img
       class="home-categories__decoration"
-      src="/images/categories/icons/decoracion_amarilla.webp"
+      src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_400/v1794957752/decoracion_amarilla.webp"
       alt=""
       aria-hidden="true"
+      loading="lazy"
+      decoding="async"
     />
   </div>
 
@@ -31,31 +36,80 @@
         <div class="home-categories__icon">
           @switch (category.slug) {
             @case ('maquetas') {
-              <img src="/images/categories/icons/maquetas.webp" alt="" />
+              <img
+                src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_200/v1794958663/maquetas.webp"
+                alt=""
+                width="80"
+                height="80"
+                loading="lazy"
+                decoding="async"
+              />
             }
 
             @case ('tripticos') {
-              <img src="/images/categories/icons/tripticos.webp" alt="" />
+              <img
+                src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_200/v1794958673/tripticos.webp"
+                alt=""
+                width="80"
+                height="80"
+                loading="lazy"
+                decoding="async"
+              />
             }
 
             @case ('papelotes') {
-              <img src="/images/categories/icons/papelotes.webp" alt="" />
+              <img
+                src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_200/v1794958668/papelotes.webp"
+                alt=""
+                width="80"
+                height="80"
+                loading="lazy"
+                decoding="async"
+              />
             }
 
             @case ('manualidades') {
-              <img src="/images/categories/icons/manualidades.webp" alt="" />
+              <img
+                src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_200/v1794958662/manualidades.webp"
+                alt=""
+                width="80"
+                height="80"
+                loading="lazy"
+                decoding="async"
+              />
             }
 
             @case ('proyectos-de-ciencia') {
-              <img src="/images/categories/icons/proyectos_ciencia.webp" alt="" />
+              <img
+                src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_200/v1794958671/proyectos_ciencia.webp"
+                alt=""
+                width="80"
+                height="80"
+                loading="lazy"
+                decoding="async"
+              />
             }
 
             @case ('carteles-y-afiches') {
-              <img src="/images/categories/icons/carteles_afiches.webp" alt="" />
+              <img
+                src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_200/v1794535430/carteles_afiches.webp"
+                alt=""
+                width="80"
+                height="80"
+                loading="lazy"
+                decoding="async"
+              />
             }
 
             @default {
-              <img src="/images/categories/icons/otros.webp" alt="" />
+              <img
+                src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_200/v1794958666/otros.webp"
+                alt=""
+                width="80"
+                height="80"
+                loading="lazy"
+                decoding="async"
+              />
             }
           }
         </div>
