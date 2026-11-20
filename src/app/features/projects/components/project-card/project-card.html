@@ -1,3 +1,4 @@
+
 <article class="project-card">
   <a
     class="project-card__image-link"
@@ -8,6 +9,7 @@
         [src]="coverImage"
         [alt]="project().title"
         loading="lazy"
+        decoding="async"
       />
     } @else {
       <div
