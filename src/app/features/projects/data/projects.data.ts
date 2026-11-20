@@ -207,13 +207,14 @@ export const PROJECTS: readonly Project[] = [
     customization:
       'Se pueden personalizar la portada, los colores, las ilustraciones, el contenido, la cantidad de páginas y el tamaño del álbum según los requisitos del trabajo.',
     coverImage:
-      '/images/projects/album-celulas/album_celulas_portada.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795141339/album_celulas_portada.webp',
     images: [
-      '/images/projects/album-celulas/album_celulas_portada.webp',
-      '/images/projects/album-celulas/album_celulas_indice.webp',
-      '/images/projects/album-celulas/album_celulas_neurona.webp',
-      '/images/projects/album-celulas/album_celulas_abierto.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795141339/album_celulas_portada.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795141339/album_celulas_indice.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795141339/album_celulas_neurona.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795141339/album_celulas_abierto.webp',
     ],
+
     featured: true,
   },
   {
