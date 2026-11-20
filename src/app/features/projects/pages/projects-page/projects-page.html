@@ -114,20 +114,32 @@
 
         <div class="projects-hero__note">
           <img
-            src="/images/projects/projects-note.webp"
+            src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_400/v1795050875/projects-note.webp"
             alt="Cada idea se convierte en algo especial"
+            loading="eager"
+            decoding="async"
           />
         </div>
-
       </div>
 
       <div class="projects-hero__visual">
         <img
           class="projects-hero__image"
-          src="/images/projects/nuestros_trabajos_img.webp"
+          src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_800/v1795050873/nuestros_trabajos_img.webp"
+          srcset="
+            https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_400/v1795050873/nuestros_trabajos_img.webp 400w,
+            https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795050873/nuestros_trabajos_img.webp 600w,
+            https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_800/v1795050873/nuestros_trabajos_img.webp 800w,
+            https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1200/v1795050873/nuestros_trabajos_img.webp 1200w
+          "
+          sizes="(max-width: 700px) 36vw, (max-width: 1000px) 43vw, 40vw"
           alt="Espacio creativo de Dani Creaciones con materiales para proyectos y manualidades"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
         />
       </div>
+
 
     </div>
   </section>
