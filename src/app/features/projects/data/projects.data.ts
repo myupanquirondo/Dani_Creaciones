@@ -180,10 +180,10 @@ export const PROJECTS: readonly Project[] = [
     customization:
       'Se pueden personalizar los colores, el tamaño, las figuras decorativas y la temática de la caja según las necesidades del cliente.',
     coverImage:
-      '/images/projects/caja-sorpresa/caja_sorpresa_frontal.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795352754/caja_sorpresa_frontal.webp',
     images: [
-      '/images/projects/caja-sorpresa/caja_sorpresa_frontal.webp',
-      '/images/projects/caja-sorpresa/caja_sorpresa_perspectiva.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795352754/caja_sorpresa_frontal.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795352754/caja_sorpresa_perspectiva.webp',
     ],
     featured: true,
   },
