@@ -238,14 +238,15 @@ export const PROJECTS: readonly Project[] = [
     customization:
       'Se pueden personalizar los colores, la portada, el contenido educativo, las ilustraciones, la cantidad de páginas y el tamaño del álbum según los requisitos del trabajo.',
     coverImage:
-      '/images/projects/album-its/album_its_portada.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795141998/album_its_portada.webp',
     images: [
-      '/images/projects/album-its/album_its_portada.webp',
-      '/images/projects/album-its/album_its_datos.webp',
-      '/images/projects/album-its/album_its_vih_1.webp',
-      '/images/projects/album-its/album_its_vih_2.webp',
-      '/images/projects/album-its/album_its_sifilis.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795141998/album_its_portada.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795141997/album_its_datos.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795141998/album_its_vih_1.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795141999/album_its_vih_2.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795141998/album_its_sifilis.webp',
     ],
+
     featured: true,
   },
   {
