@@ -47,10 +47,10 @@ export const PROJECTS: readonly Project[] = [
     customization:
       'Se pueden personalizar los colores, ejemplos, contenido, tamaño y decoración de acuerdo con el tema solicitado.',
     coverImage:
-      '/images/projects/antonimo/el-antonimo-portada.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795352310/el-antonimo-portada.webp',
     images: [
-      '/images/projects/antonimo/el-antonimo-portada.webp',
-      '/images/projects/antonimo/el-antonimo-abierto.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795352310/el-antonimo-portada.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795352310/el-antonimo-abierto.webp',
     ],
     featured: true,
   },
