@@ -127,9 +127,9 @@ export const PROJECTS: readonly Project[] = [
     customization:
       'Se pueden modificar los colores, la información, las imágenes, el tamaño y la distribución del contenido según los requisitos del trabajo.',
     coverImage:
-      '/images/projects/reniec/reniec.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795482412/reniec.webp',
     images: [
-      '/images/projects/reniec/reniec.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795482412/reniec.webp',
     ],
     featured: true,
   },
