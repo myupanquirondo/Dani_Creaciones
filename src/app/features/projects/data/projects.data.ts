@@ -20,10 +20,10 @@ export const PROJECTS: readonly Project[] = [
     customization:
       'Se pueden personalizar los colores, el contenido, el tamaño y la temática según el trabajo solicitado.',
     coverImage:
-      '/images/projects/nucleo-del-sujeto/nucleo-del-sujeto-portada.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795482230/nucleo-del-sujeto-portada.webp',
     images: [
-      '/images/projects/nucleo-del-sujeto/nucleo-del-sujeto-portada.webp',
-      '/images/projects/nucleo-del-sujeto/nucleo-del-sujeto-abierto.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795482230/nucleo-del-sujeto-portada.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795482230/nucleo-del-sujeto-abierto.webp',
     ],
     featured: true,
   },
