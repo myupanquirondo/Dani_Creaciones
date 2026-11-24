@@ -269,10 +269,10 @@ export const PROJECTS: readonly Project[] = [
     customization:
       'Se pueden personalizar el tamaño, los colores, el diseño de la pantalla, la marca y los detalles exteriores según los requisitos del trabajo.',
     coverImage:
-      '/images/projects/celular-maqueta/celular_maqueta_frontal.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795481686/celular_maqueta_frontal.webp',
     images: [
-      '/images/projects/celular-maqueta/celular_maqueta_frontal.webp',
-      '/images/projects/celular-maqueta/celular_maqueta_posterior.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795481686/celular_maqueta_frontal.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795481686/celular_maqueta_posterior.webp',
     ],
     featured: true,
   },
