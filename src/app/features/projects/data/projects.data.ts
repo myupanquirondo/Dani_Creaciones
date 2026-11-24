@@ -74,9 +74,9 @@ export const PROJECTS: readonly Project[] = [
     customization:
       'El contenido, los colores, las imágenes, las secciones y el tamaño pueden adaptarse según el tema y los requisitos del trabajo.',
     coverImage:
-      '/images/projects/mar-peruano/mar-peruano.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795481878/mar-peruano.webp',
     images: [
-      '/images/projects/mar-peruano/mar-peruano.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795481878/mar-peruano.webp',
     ],
     featured: true,
   },
