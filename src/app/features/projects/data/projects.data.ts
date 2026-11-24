@@ -100,10 +100,10 @@ export const PROJECTS: readonly Project[] = [
     customization:
       'Se pueden personalizar las escenas, los milagros representados, los personajes, los colores, el tamaño y los textos según lo solicitado.',
     coverImage:
-      '/images/projects/milagros-de-jesus/los-milagros-de-jesus-adelante.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795482082/los-milagros-de-jesus-adelante.webp',
     images: [
-      '/images/projects/milagros-de-jesus/los-milagros-de-jesus-adelante.webp',
-      '/images/projects/milagros-de-jesus/los-milagros-de-jesus-atras.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795482082/los-milagros-de-jesus-adelante.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795482082/los-milagros-de-jesus-atras.webp',
     ],
     featured: true,
   },
