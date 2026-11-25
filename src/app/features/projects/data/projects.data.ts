@@ -155,10 +155,10 @@ export const PROJECTS: readonly Project[] = [
     customization:
       'Se pueden personalizar los colores, el tamaño, los diseños y los elementos decorativos según los requisitos del proyecto solicitado.',
     coverImage:
-      '/images/projects/tren-bimbo/tren_bimbo_frontal.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_600/v1795482514/tren_bimbo_frontal.webp',
     images: [
-      '/images/projects/tren-bimbo/tren_bimbo_frontal.webp',
-      '/images/projects/tren-bimbo/tren_bimbo_decostado.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795482514/tren_bimbo_frontal.webp',
+      'https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_1000/v1795482512/tren_bimbo_decostado.webp',
     ],
     featured: true,
   },
