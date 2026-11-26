@@ -38,6 +38,8 @@ export class FeaturedProjects implements AfterViewInit, OnDestroy {
 
   private intervalId?: ReturnType<typeof setInterval>;
   private scrollTimeout?: ReturnType<typeof setTimeout>;
+  private autoplayTimeout?: ReturnType<typeof setTimeout>;
+
   private currentIndex = 0;
   private isAdjusting = false;
 
@@ -56,7 +58,9 @@ export class FeaturedProjects implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.stopAutoplay();
+
     clearTimeout(this.scrollTimeout);
+    clearTimeout(this.autoplayTimeout);
   }
 
   private getStep(): number {
@@ -158,15 +162,16 @@ export class FeaturedProjects implements AfterViewInit, OnDestroy {
   }
 
   private restartAutoplay(): void {
+    clearTimeout(this.autoplayTimeout);
     this.startAutoplay();
   }
 
   onUserInteraction(): void {
     this.stopAutoplay();
 
-    clearTimeout(this.scrollTimeout);
+    clearTimeout(this.autoplayTimeout);
 
-    this.scrollTimeout = setTimeout(() => {
+    this.autoplayTimeout = setTimeout(() => {
       this.normalizePosition();
       this.startAutoplay();
     }, 3500);
