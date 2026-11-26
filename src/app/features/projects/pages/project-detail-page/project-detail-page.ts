@@ -1,5 +1,5 @@
 import { Component, computed, inject, signal } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 
@@ -8,7 +8,7 @@ import { CONTACT_INFO } from '../../../../core/constants/contact.constants';
 
 @Component({
   selector: 'app-project-detail-page',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './project-detail-page.html',
   styleUrl: './project-detail-page.scss',
 })
