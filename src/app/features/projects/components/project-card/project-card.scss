@@ -14,9 +14,26 @@
     box-shadow var(--transition-normal);
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+.project-card__link {
+  display: block;
+  height: 100%;
+
+  color: inherit;
+  text-decoration: none;
+
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .project-card__link:hover h3 {
+    color: var(--color-accent);
+  }
 }
 
 .project-card__image-link {
@@ -62,12 +79,8 @@
   line-height: 1.25;
 }
 
-.project-card__content h3 a {
+.project-card__content h3 {
   transition: color var(--transition-fast);
-}
-
-.project-card__content h3 a:hover {
-  color: var(--color-accent);
 }
 
 .project-card__content > p:last-child {
