@@ -1,36 +1,34 @@
-
 <article class="project-card">
   <a
-    class="project-card__image-link"
+    class="project-card__link"
     [routerLink]="['/proyectos', project().slug]"
   >
-    @if (project().coverImage; as coverImage) {
-      <img
-        [src]="coverImage"
-        [alt]="project().title"
-        loading="lazy"
-        decoding="async"
-      />
-    } @else {
-      <div
-        class="project-card__placeholder"
-        role="img"
-        [attr.aria-label]="'Imagen pendiente de ' + project().title"
-      >
-        <span>Foto próximamente</span>
-      </div>
-    }
+    <div class="project-card__image-link">
+      @if (project().coverImage; as coverImage) {
+        <img
+          [src]="coverImage"
+          [alt]="project().title"
+          loading="lazy"
+          decoding="async"
+          draggable="false"
+        />
+      } @else {
+        <div
+          class="project-card__placeholder"
+          role="img"
+          [attr.aria-label]="'Imagen pendiente de ' + project().title"
+        >
+          <span>Foto próximamente</span>
+        </div>
+      }
+    </div>
+
+    <div class="project-card__content">
+      <p class="project-card__category">
+        {{ project().category }}
+      </p>
+
+      <h3>{{ project().title }}</h3>
+    </div>
   </a>
-
-  <div class="project-card__content">
-    <p class="project-card__category">
-      {{ project().category }}
-    </p>
-
-    <h3>
-      <a [routerLink]="['/proyectos', project().slug]">
-        {{ project().title }}
-      </a>
-    </h3>
-  </div>
 </article>
