@@ -1,17 +1,63 @@
+
 @if (project(); as currentProject) {
   <article class="project-detail">
 
+    <!-- ENCABEZADO DEL PROYECTO -->
     <header class="project-detail__header">
-      <p class="project-detail__category">
-        {{ currentProject.category }}
-      </p>
+      <div class="project-detail__header-container">
 
-      <h1>{{ currentProject.title }}</h1>
+        <nav class="project-detail__breadcrumb" aria-label="Ruta de navegación">
+          <a routerLink="/">Inicio</a>
+          <span aria-hidden="true">›</span>
+          <a routerLink="/proyectos">Nuestros trabajos</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">{{ currentProject.title }}</span>
+        </nav>
+
+        <p class="project-detail__category">
+          {{ currentProject.category }}
+        </p>
+
+        <div class="project-detail__title">
+
+          <img
+            class="project-detail__title-decoration"
+            src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_120/v1794957754/decoracion_rosa.webp"
+            alt=""
+            aria-hidden="true"
+          />
+
+          <h1>
+            {{ currentProject.title }}
+            <span aria-hidden="true">♡</span>
+          </h1>
+
+          <img
+            class="project-detail__title-decoration"
+            src="https://res.cloudinary.com/ll1rz1dd/image/upload/f_auto,q_auto,w_120/v1794957752/decoracion_amarilla.webp"
+            alt=""
+            aria-hidden="true"
+          />
+
+        </div>
+
+        <p class="project-detail__subtitle">
+          Una creación hecha con dedicación y mucho detalle.
+        </p>
+
+      </div>
     </header>
 
+    <!-- CONTENIDO DEL PROYECTO -->
     <section class="project-detail__summary">
 
+      <!-- GALERÍA -->
       <div class="project-detail__cover">
+
+        <div class="project-detail__note">
+          <span>¡Hecho<br />a mano!</span>
+          <span class="project-detail__note-heart" aria-hidden="true">♡</span>
+        </div>
 
         @if (currentImage(); as image) {
 
@@ -20,6 +66,7 @@
             <img
               [src]="image"
               [alt]="currentProject.title"
+              decoding="async"
             />
 
             @if (currentProject.images.length > 1) {
@@ -59,6 +106,7 @@
                   class="project-detail__carousel-dot"
                   [class.project-detail__carousel-dot--active]="currentImageIndex() === index"
                   [attr.aria-label]="'Ver imagen ' + (index + 1)"
+                  [attr.aria-pressed]="currentImageIndex() === index"
                   (click)="selectImage(index)"
                 ></button>
               }
@@ -77,44 +125,113 @@
 
       </div>
 
+      <!-- INFORMACIÓN -->
       <div class="project-detail__information">
 
         <div class="project-detail__description">
-          <h2>Sobre este proyecto</h2>
+          <h2>
+            Sobre este proyecto
+            <span class="project-detail__heading-heart" aria-hidden="true">♡</span>
+          </h2>
+
           <p>{{ currentProject.description }}</p>
         </div>
 
+        <!-- PRECIO Y TIEMPO -->
         <div class="project-detail__details">
 
-          <div class="project-detail__detail">
-            <span class="project-detail__detail-label">Precio</span>
+          <div class="project-detail__detail project-detail__detail--price">
+
+            <span class="project-detail__detail-label">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 13.5 13.5 20a2 2 0 0 1-2.8 0L3 12.3V3h9.3l7.7 7.7a2 2 0 0 1 0 2.8Z"/>
+                <circle cx="7.5" cy="7.5" r="1"/>
+              </svg>
+
+              Precio
+            </span>
+
             <strong>{{ currentProject.price }}</strong>
+
           </div>
 
-          <div class="project-detail__detail">
+          <div class="project-detail__detail project-detail__detail--time">
+
             <span class="project-detail__detail-label">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+
               Tiempo aproximado
             </span>
+
             <strong>{{ currentProject.estimatedTime }}</strong>
+
           </div>
 
         </div>
 
+        <!-- MATERIALES -->
         <div class="project-detail__materials">
-          <h2>Materiales</h2>
+
+          <h2>
+            Materiales
+            <span class="project-detail__heading-sparkle" aria-hidden="true">✧</span>
+          </h2>
 
           <ul>
             @for (material of currentProject.materials; track material) {
               <li>{{ material }}</li>
             }
           </ul>
+
         </div>
 
+        <!-- PERSONALIZACIÓN -->
         <div class="project-detail__customization">
-          <h2>Personalización</h2>
+
+          <h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m14 5 5 5"/>
+              <path d="m4 20 4.5-1 12-12a2 2 0 0 0-5-5l-12 12L4 20Z"/>
+            </svg>
+
+            Personalízalo a tu manera
+          </h2>
+
           <p>{{ currentProject.customization }}</p>
+
         </div>
 
+        <!-- WHATSAPP -->
         <a
           class="project-detail__whatsapp"
           [href]="whatsappUrl()"
@@ -122,6 +239,7 @@
           rel="noopener noreferrer"
         >
           Cotizar este proyecto por WhatsApp
+          <span aria-hidden="true">→</span>
         </a>
 
       </div>
@@ -130,8 +248,10 @@
 
   </article>
 } @else {
+
   <section class="project-detail__not-found">
     <h1>Proyecto no encontrado</h1>
     <p>El proyecto que buscas no existe o ya no está disponible.</p>
   </section>
+
 }
