@@ -1,32 +1,36 @@
 
 <article class="category-card">
-  @if (category().image; as image) {
-    <img
-      [src]="image"
-      [alt]="category().name"
-      loading="lazy"
-      decoding="async"
-    />
-  } @else {
-    <div
-      class="category-card__placeholder"
-      role="img"
-      [attr.aria-label]="'Imagen pendiente de ' + category().name"
-    >
-      <span>Imagen próximamente</span>
+  <a
+    class="category-card__link"
+    [routerLink]="['/proyectos']"
+    [queryParams]="{ categoria: category().slug }"
+    [attr.aria-label]="'Ver proyectos de ' + category().name"
+  >
+    @if (category().image; as image) {
+      <img
+        [src]="image"
+        [alt]="category().name"
+        loading="lazy"
+        decoding="async"
+      />
+    } @else {
+      <div
+        class="category-card__placeholder"
+        role="img"
+        [attr.aria-label]="'Imagen pendiente de ' + category().name"
+      >
+        <span>Imagen próximamente</span>
+      </div>
+    }
+
+    <div class="category-card__content">
+      <h3>{{ category().name }}</h3>
+
+      <p>{{ category().description }}</p>
+
+      <span class="category-card__action">
+        Ver proyectos
+      </span>
     </div>
-  }
-
-  <div class="category-card__content">
-    <h3>{{ category().name }}</h3>
-
-    <p>{{ category().description }}</p>
-
-    <a
-      [routerLink]="['/proyectos']"
-      [queryParams]="{ categoria: category().slug }"
-    >
-      Ver proyectos
-    </a>
-  </div>
+  </a>
 </article>
