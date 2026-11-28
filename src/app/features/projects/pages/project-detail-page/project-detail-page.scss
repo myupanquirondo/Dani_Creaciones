@@ -70,66 +70,146 @@
 
 .decoration {
   position: absolute;
-
   display: block;
-
-  font-family: var(--font-heading);
-  font-weight: 700;
-  line-height: 1;
 }
+
+svg.decoration {
+  height: auto;
+  aspect-ratio: 1 / 1;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+// CORAZÓN GRANDE
 
 .decoration--heart {
   top: 43%;
   left: 6%;
 
+  width: clamp(32px, 3.5vw, 54px);
+
   color: #f38bbd;
-  font-size: clamp(2rem, 4vw, 4rem);
 
   transform: rotate(-18deg);
-  opacity: 0.55;
+  opacity: 0.65;
 }
+
+// DESTELLO GRANDE
 
 .decoration--sparkle {
   top: 25%;
   right: 8%;
 
+  width: clamp(32px, 3.5vw, 50px);
+
   color: #ad87ef;
-  font-size: clamp(2rem, 3.5vw, 3.5rem);
 
   transform: rotate(12deg);
   opacity: 0.65;
 }
 
+// ESTRELLA
+
 .decoration--star {
   bottom: 15%;
   right: 17%;
 
-  color: #efbf51;
-  font-size: 1.8rem;
+  width: 28px;
 
+  color: #efbf51;
+
+  transform: rotate(15deg);
   opacity: 0.65;
 }
+
+// CORAZÓN PEQUEÑO
 
 .decoration--heart-small {
   bottom: 15%;
   right: 4%;
 
+  width: 24px;
+
   color: #f38bbd;
-  font-size: 1.8rem;
 
   transform: rotate(18deg);
   opacity: 0.55;
 }
 
-.decoration--sparkle-small {
+// DESTELLOS
+
+.decoration--sparkles {
   top: 23%;
   left: 18%;
 
-  color: #b18aef;
-  font-size: 1.5rem;
+  width: 30px;
 
+  color: #b18aef;
+
+  transform: rotate(-12deg);
   opacity: 0.65;
 }
+
+// FLOR
+
+.decoration--flower {
+  bottom: 10%;
+  left: 21%;
+
+  width: 38px;
+
+  color: #e99bbd;
+
+  transform: rotate(-20deg);
+  opacity: 0.55;
+}
+
+// CÍRCULO
+
+.decoration--circle {
+  top: 17%;
+  right: 26%;
+
+  width: 14px;
+
+  color: #b18aef;
+
+  opacity: 0.55;
+}
+
+// CONFETI
+
+.decoration--party {
+  top: 43%;
+  right: 13%;
+
+  width: 38px;
+
+  color: #eab84e;
+
+  transform: rotate(15deg);
+  opacity: 0.5;
+}
+
+// VARITA MÁGICA
+
+.decoration--wand {
+  top: 48%;
+  left: 14%;
+
+  width: 36px;
+
+  color: #ad87ef;
+
+  transform: rotate(-18deg);
+  opacity: 0.5;
+}
+
+// PUNTOS DECORATIVOS
 
 .decoration--dot {
   bottom: 20%;
@@ -155,6 +235,32 @@
   border-radius: 50%;
 
   opacity: 0.65;
+}
+
+.decoration--dot-extra {
+  top: 32%;
+  left: 12%;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: #ad87ef;
+  border-radius: 50%;
+
+  opacity: 0.55;
+}
+
+.decoration--dot-extra-small {
+  bottom: 30%;
+  right: 12%;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #f38bbd;
+  border-radius: 50%;
+
+  opacity: 0.6;
 }
 
 // BREADCRUMB
@@ -807,6 +913,13 @@
 @media (max-width: 1000px) {
   .project-detail__decorations {
     opacity: 0.55;
+  }
+
+  .decoration--wand,
+  .decoration--party,
+  .decoration--flower,
+  .decoration--circle {
+    display: none;
   }
 
   .project-detail__summary {
